@@ -1,0 +1,190 @@
+% Tamaño de letra.
+\documentclass[12pt,titlepage]{report}
+
+%------------------------------ Paquetes ----------------------------------
+
+% Paquetes:
+
+%Para comentarios multilínea.
+\usepackage{verbatim}
+
+% Para tener cabecera y pie de página con un estilo personalizado.
+\usepackage{fancyhdr}
+
+% Codificación UTF-8
+\usepackage[utf8]{inputenc}
+
+% Castellano.
+\usepackage[spanish]{babel}
+
+% Tamaño de página y márgenes.
+\usepackage[a4paper,headheight=16pt,scale={0.75,0.8},hoffset=0.5cm]{geometry}
+
+% Para poder agregar notas al pie en tablas:
+%\usepackage{threeparttable}
+
+% Tipo de letra Helvetica (Arial).
+%\usepackage{helvet}
+%\renewcommand\familydefault{\sfdefault}
+
+% Gráficos:
+
+% Para incluir imágenes, el siguiente código carga el paquete graphicx
+% según se esté generando un archivo dvi o un pdf (con pdflatex).
+
+% Para generar dv.
+%\usepackage[dvips]{graphicx}
+
+% Para generar pdf.
+\usepackage[pdftex]{graphicx}
+\pdfcompresslevel=9
+
+\usepackage{pdfpages}
+
+%
+% Directorio donde están las imagenes.
+%
+%\newcommand{\imgdir}{includes}
+%\graphicspath{{\imgdir/}}
+
+%------------------------------ ~paquetes ---------------------------------
+
+%------------------------- Inicio del documento ---------------------------
+
+\begin{document}
+
+% ---------------------- Encabezado y pie de página -----------------------
+
+% Encabezado: sección a la derecha.
+% Pie de página: número de página a la derecha.
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markboth{}{\thesection\ \ #1}}
+\lhead{}
+\chead{}
+\rhead{\rightmark}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage}
+
+% ---------------------- ~Encabezado y pie de página ----------------------
+
+% -------------------------- Título y autor(es) ---------------------------
+
+\title{Información en las organizaciones}
+\author{}
+
+% -------------------------- ~Título y autor(es) --------------------------
+
+% ------------------------------- Carátula --------------------------------
+
+\begin{titlepage}
+
+\thispagestyle{empty}
+
+% Logo facultad más pie de la figura.
+\begin{center}
+\includegraphics[scale=0.55]{./Images/fiuba}\\
+\large{\textsc{Universidad de Buenos Aires}}\\
+\large{\textsc{Facultad De Ingeniería}}\\
+\small{Año 2010 - 1\textsuperscript{er} Cuatrimestre}
+\end{center}
+
+\vfill
+
+% Título central.
+\begin{center}
+
+\Large{\underline{\textsc{Información en las organizaciones (71.13)}}}
+
+\vfill
+
+% Tabla de integrantes.
+
+\Large{\underline{\textsc{Trabajo Práctico}}}
+
+\vfill
+
+\Large\underline{Integrantes} \linebreak\linebreak
+
+% Separación entre columnas.
+\large\addtolength{\tabcolsep}{-3pt}
+% Tres columnas con alineación centrada.
+\begin{tabular}{|| c | c | c ||}
+\hline
+\textbf{Apellido, Nombre} & \textbf{Nro. Padrón} & \textbf{E-mail} \\
+\hline
+Berrilio, Pablo & 88812 & pabloberrilio@gmail.com \\
+\hline
+Bukaczewski, Verónica & 86954 & vero13@gmail.com \\
+\hline
+De Antoni, Matías & 88506 & mdeantoni87@gmail.com \\
+\hline
+Garbarini, Lucía & 88300 & lu.teddy@gmail.com\\
+\hline
+Invernizzi, Esteban Ignacio & 88817 & invernizzie@gmail.com\\
+\hline
+Mouso, Nicolás Gastón & 88528 & nicolasgnr@gmail.com \\
+\hline
+Ygounet, Guido N. & 88246 & gygounet@gmail.com \\
+\hline
+Sergio & XXXXX & sergiozz123@gmail.com \\
+\hline
+\end{tabular}
+\end{center}
+
+\vfill
+
+\hrule
+\vspace{0.2cm}
+
+% Pie de página de la carátula.
+\noindent\small{71.13 - Información en las organizaciones \hfill Grupo 5}
+
+\end{titlepage}
+
+% ------------------------------- ~Carátula -------------------------------
+
+% -------------------------------- Índice ---------------------------------
+
+% Hago que las páginas se comiencen a contar a partir de aquí.
+\setcounter{page}{1}
+
+% Índice.
+\tableofcontents
+\newpage
+
+% -------------------------------- ~Índice --------------------------------
+
+% ----------------------------- Inicio del tp -----------------------------
+
+% Introducción.
+%\chapter*{Introducción}
+%\addcontentsline{toc}{chapter}{Introducción}
+
+\part{Práctica}
+
+\chapter{Práctica 1}
+
+%\include{Practica/Practica1}
+
+\part{Análisis de Empresa}
+\chapter*{Enunciado}
+Enunciado del trabajo práctico...
+
+\chapter{Elección de la empresa}
+
+\include{Empresa/Eleccion}
+
+\chapter{Actividad de la empresa}
+
+%\include{Empresa/Empresa}
+
+% Para incluir un pdf usar:
+%\includepdf[pages=1-19, scale=0.7]{*.pdf}
+
+% ------------------------------ Fin del tp -------------------------------
+
+\end{document}
+
+%---------------------------- Fin del documento ---------------------------
