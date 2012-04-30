@@ -1,0 +1,8 @@
+Preguntas:
+- que sectores intervienen en el proceso de ventas?
+- que sector verifica que la venta es posible (si hay stock o se puede producir)
+- que documentos intercambian el sector de produccion y el de almacenes para realizar el pedido
+_ a quienes se envia la SPV?
+- por que hay dos almacenes? cual es la funcion especifica de cada uno que los diferencia? Como es la comunicacion entre los dos almacenes?
+- como realiza el pedido el cliente? mediante un catalogo o con cotización?
+- se mantiene historial de clientes para consultar limite de credito de ventas o similar? en caso afirmativo, quien lo actualiza / consulta?
