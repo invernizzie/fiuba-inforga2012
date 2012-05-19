@@ -21,3 +21,40 @@
 \item Contadur\'ia recibe la copia de la factura y el remito firmado por el cliente y la asienta como recibida por el cliente. El pago de la factura es parte del CNR de Cobros.Contaduria
 \end{enumerate}
 
+\subsubsection{Entrevista}
+
+Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ventas que la empresa puso a nuestra disposici\'on, surgi\'o la necesidad de realizar una entrevista para aclarar ciertos puntos que no quedaban claros con nuestro contacto. Los puntos en cuesti\'on fueron los siguientes:
+
+\begin{description}
+ \item \underline{Ventas a Clientes}: \\
+	Es el Centro de Atenci\'ion al Cliente (\textit{CAC}) quien interact\'ua con los clientes para realizar las ventas. Las ventas a clientes las ventas se realizan a partir de un pedido de cotizaci\'on confeccionado por el CAC. Posteriormente, el CAC formaliza el pedido de venta al recibir una Orden de Compra del cliente. Internamente, el CAC realiza una Solicitud de Pedido de Ventas (SPV).  \\
+	Para el caso de los Distribuidores, ellos reciben la lista de precios y pueden formalizar directamente la Orden de Compra, es decir, que no hay cotizaci\'on previa del CAC.
+ \item \underline{Registro de Clientes}: \\
+	La empresa mantiene un registro de los clientes, y las transacciones que realizan con la empresa, mediante el sistema ERP Bejerman. Esta base de datos es actualizada por el \'area de Ventas, a trav\'es del \textit{CAC} y es consultada por todas las personas de la empresa que tienen habilitada esa funci\'on dentro de los m\'odulos del sistema inform\'atico. 
+ \item \underline{Moviemiento de Materiales}: \\
+	El medio de comunicaci\'on entre almacenes es electr\'onico, es decir, se realiza a trav\'es del sistema Bejerman, y as\'i se realizan las transferencias ``inter-dep\'osito''. Los documentos internos s\'olo se imprimen en papel cuando resulta necesario, y en casos particulares. En una \'epoca se utilizaban fichas y vale de materiales, pero fueron reemplazados por el sistema inform\'atico. Lo mismo sucede con el sector de Producci\'on, que maneja el movimiento de materiales mediante el sistema Bejerman.\\
+	El sector de Producci\'on recibe por sistema la carga de datos del \'area de Ventas (CAC), formaliz\'andolo como ``Orden de Pedido''. En funci\'on a ello elabora una ``Orden de Montaje'', donde el sistema carga los elementos necesarios para confeccionar el pedido solicitado (las distintas partes y piezas para armar la luminaria). Terminado el producto, \'este se declara en el Dep\'osito Producto Terminado (02). Luego, el sector de Almacenes realiza por sistema la transferencia del producto, desde el 02 al Deposito Principal (01), y es desde aqu\'i que el \'area de Expedici\'on puede generar posteriormente el remito para despachar la mercader\'ia.  
+	El transportista carga la mercader\'ia seg\'un la información emanada de los remitos, controlando f\'isicamente la carga.  Luego se le confecciona una Hoja de Ruta con el itinerario diario y por ultimo se le emite un permiso ante el ARBA, en caso que la mercader\'ia que se transporte supere los \$20.000.-   
+	
+\end{description}
+
+\subsubsection{Normas de Control Interno}
+
+\pagebreak
+
+\subsubsection{Formularios de Ventas}
+
+%%%%%%%%%%%%%%%%%%% TODO!!! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pasar los documentos a imagenes y describir cada campo %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin {description}
+ \item \underline{\textbf{Factura}} \\
+	 \includepdf[pages=1, scale=0.9]{./Empresa/Circuitos/Ventas/ModeloFactura.pdf}
+ \item \underline{\textbf{Hoja de Ruta}} \\
+	 \includepdf[pages=1, scale=0.9]{./Empresa/Circuitos/Ventas/ModeloHojaRuta.pdf}
+ \item \underline{\textbf{Remito}}  \\
+	 \includepdf[pages=1, scale=0.9]{./Empresa/Circuitos/Ventas/ModeloRemito.pdf}
+\end {description}
+
+
+
