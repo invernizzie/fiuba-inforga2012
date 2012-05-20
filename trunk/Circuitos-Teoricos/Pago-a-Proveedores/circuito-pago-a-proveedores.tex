@@ -52,8 +52,8 @@
   \item Proveedor distribuye recibo original a Tesorería, conserva el duplicado.
   \item Cuentas a Pagar distribuye las órdenes de pago. Original y duplicado a Tesorería, conserva el triplicado.
   \item Tesorería distribuye cheque, orden de pago original y legajo de pago a Gcia. Administrativa.
-  \item Tesorería distribuye cheque a proveedor.
-  \item Tesorería distribuye  Recibo y Legajo a Contaduría.
+  \item Tesorería distribuye cheque a proveedor, previamente lo registra.
+  \item Tesorería distribuye Recibo y Legajo a Contaduría.
 \end{enumerate}
 
 \begin{center}
@@ -93,9 +93,9 @@
   \includegraphics{./Images/Simbolos/simbolo-Decision.png}
 \end{center}
 \begin{enumerate}
-  \item Proveedor controla cheque contra factura, si está bien emite recibo, caso contrario devuelve cheque a Tesorería.
-  \item Cuentas a Pagar controla la factura, si está bien confecciona OP, sino la devuelve al proveedor.
-  \item Gcia. administrativa controla legajo, OP y cheque, si está bien coloca PAGADO y firma el cheque, caso contrario devuelve la documentación a Tesorería.
+  \item Proveedor si el cheque pasa el control y verificaci\'on, entonces se emite el recibo; caso contrario devuelve el cheque a Tesorería.
+  \item Cuentas a Pagar si la factura pasa el control y verificaci\'on, entonces arma el legajo de pago; caso contrario rechaza la factura y la devuelve al proveedor.
+  \item Gcia. administrativa si legajo pasa el control y verificaci\'on, entonces coloca PAGADO y firma el cheque; caso contrario devuelve la documentación a Tesorería.
 \end{enumerate}
 
 \begin{center}
@@ -176,6 +176,13 @@ del pago.
   \item \textbf{Emisor:} Tesorería.
   \item \textbf{Cantidad de Copias Emitidas:} Original.
   \item \textbf{Sector receptor:} Gerencia Administrativa.
+\end{itemize}
+
+\textbf{Tipos de cheques}
+\begin{itemize}
+ \item \textbf{Cheque com\'un}
+ \item \textbf{Cheque de pago diferido:} (Art\'iculo 52de la Ley 24.452) El cheque de pago diferido es una orden de pago librada a días vista, a contar desde su presentación para registro en una entidad autorizada, contra la misma u otra en la cual el librador a la fecha de vencimiento debe tener fondos suficientes depositados a su orden en cuenta corriente o autorización para girar en descubierto, dentro de los límites de registro que autorice el girado. La diferencia entre la fecha de emisión y la fecha de vencimiento no puede superar os 365 días.Sin perjuicio de las responsabilidades en que incurra por el derecho común, bajo ninguna circunstancia el girado será responsable si el cheque no es pagado a su vencimiento. Ni el registro del cheque, ni la determinación de límites de registro generan responsabilidad.El girado puede avalar el cheque de pago diferido.
+ \item \textbf{Cheque cruzado:} (Art\'iculo 44 de la Ley 24.452) El librador o el portador de un cheque pueden cruzarlo con los efectos indicados en el artículo siguiente. El cruzamiento se efectúa por medio de dos barras paralelas colocadas en el anverso del cheque. Puede ser general o especial. El cruzamiento es especial si entre las barras contiene el nombre de una entidad autorizada para prestar el servicio de cheque, de lo contrario el cruzamiento es general. El cruzamiento general se puede transformar en cruzamiento especial; pero el cruzamiento especial no se puede transformar en cruzamiento general. La tacha del cruzamiento o de la mención contenida entre las barras se tendrá por no hecha. En consecuencia el cheque cruzado solo se cobra a través de un banco, depositándolo.
 \end{itemize}
 
 \subsubsection{Descripción}
