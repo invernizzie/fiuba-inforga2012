@@ -39,6 +39,13 @@
   \item Parte de Producci\'on (PP).
   \item Nota de Rechazo (NR).
   \item Informe de Aceptaci\'on (IA).
+  \item Ficha de Stock de Materia Prima (FSMP).
+  \item Ficha de Stock de Producto Terminado (FSPT).
+  \item Plan Maestro de Producci\'on (PMP).
+  \item Programa de Producci\'on (PmaP).
+  \item Especificaciones t\'ecnicas (ET).
+  \item Hoja de Ruta (HR).
+  \item Normas de Control de Calidad (NCC).
 \end{enumerate}
 
 \begin{center}
@@ -60,15 +67,15 @@
   \includegraphics{./Images/Simbolos/simbolo-Firma.png}
 \end{center}
 \begin{enumerate}
-  \item Planificaci\'on y Control de la Producci\'on: firma LRMP original.
-  \item Planificaci\'on y Control de la Producci\'on: firma OP original y las dos primeras copias.
-  \item Almac\'en de Materia Prima: firma LE original.
-  \item Almac\'en de Materia Prima: firma PM primera y segunda copia.
-  \item F\'abrica: firma PM original, primera y segunda copia.
-  \item F\'abrica: firma PM primera copia conformada.
-  \item F\'abrica: firma PP original y las dos primeras copias.
-  \item Control de Calidad: firma NR original y copia.
-  \item Control de Calidad: firma IA original y copia.
+  \item Planificaci\'on y Control de la Producci\'on: se firman las LRMP.
+  \item Planificaci\'on y Control de la Producci\'on: se firman las OP.
+  \item Almac\'en de Materia Prima: se firman las LE.
+  \item Almac\'en de Materia Prima: se firman PM primera y segunda copia.
+  \item F\'abrica: se firman los PM.
+  \item F\'abrica: se firma la PM primera copia conformada.
+  \item F\'abrica: se firman PP.
+  \item Control de Calidad: se firman las NR.
+  \item Control de Calidad: se firman los IA.
 \end{enumerate}
 
 \begin{center}
@@ -91,21 +98,21 @@
   \includegraphics{./Images/Simbolos/simbolo-Almacenamiento-Transitorio.png}
 \end{center}
 \begin{enumerate}
-  \item Planificaci\'on y Control de la Producci\'on: almacena de manera transitoria Plan Maestro de Producci\'on (PMP) y Programa de Producci\'on (PmaP).
+  \item Planificaci\'on y Control de la Producci\'on: almacena de manera transitoria PMP y PmaP.
   \item Planificaci\'on y Control de la Producci\'on: almacena de manera transitoria LRMP copia.
   \item Planificaci\'on y Control de la Producci\'on: almacena de manera transitoria OP tercera copia.
   \item Planificaci\'on y Control de la Producci\'on: almacena de manera transitoria PMP y PmaP.
-  \item Almac\'en de Materia Prima: almacena de manera transitoria Ficha de Stock de Materia Prima (FSMP).
+  \item Almac\'en de Materia Prima: almacena de manera transitoria FSMP.
   \item Almac\'en de Materia Prima: almacena de manera transitoria LE copia.
   \item Almac\'en de Materia Prima: almacena de manera transitoria FSMP.
   \item Almac\'en de Materia Prima: almacena de manera transitoria PM original.  
   \item Almac\'en de Materia Prima: almacena de manera transitoria FSMP.
   \item F\'abrica: almacena de manera transitoria OP original y PM tercera copia.
-  \item F\'abrica: almacena de manera transitoria Especificaciones t\'ecnicas (ET) y Hoja de Ruta (HR).
+  \item F\'abrica: almacena de manera transitoria ET y HR.
   \item Control de Calidad: almacena de manera transitoria OP primera copia.
-  \item Control de Calidad: almacena de manera transitoria ET y Normas de Control de Calidad (NCC).
+  \item Control de Calidad: almacena de manera transitoria ET y NCC.
   \item Almac\'en de Producto Terminado: almacena de manera transitoria OP segunda copia.
-  \item Almac\'en de Producto Terminado: almacena de manera transitoria Ficha de Stock de Producto Terminado (FSPT).
+  \item Almac\'en de Producto Terminado: almacena de manera transitoria FSPT.
 \end{enumerate}
 
 \begin{center}
@@ -124,11 +131,11 @@
   \includegraphics{./Images/Simbolos/simbolo-Decision.png}
 \end{center}
 \begin{enumerate}
-  \item Almac\'en de Materia Prima: 
-  \item Almac\'en de Materia Prima: 
-  \item F\'abrica: 
-  \item F\'abrica: 
-  \item Control de Calidad: 
+  \item Almac\'en de Materia Prima: Si se tiene el stock disponible se registra la reserva de los materiales y se emite LE; caso contrario se emite LE con una fecha tentativa de ingreso de materia prima desde el proveedor, en forma simult\'anea se realiza una solicitud de compra seg\'un el Procedimiento del circuito de Compras (CNR).
+  \item Almac\'en de Materia Prima: Si el PM es correcto entonces se procede a enviar el material; caso contrario lo devuelve a F\'abrica para que emita el PM nuevamente.
+  \item F\'abrica: Si los materiales recibidos son los correctos se contin\'ua con la descarga; caso contrario se devuelven los materiales al Almac\'en de Materia Prima.
+  \item F\'abrica: Si se recibe el AI se procede al env\'io de los materiales al Almac\'en de Producto Terminado. Si se recibe el NR, se comienza una serie de gestiones internas en funci\'on de Procedimientos est\'andares y manuales de autorizaciones, para el tratamiento de Producto NO CONFORME.
+  \item Control de Calidad: Si la muestra pasa los controles de calidad, entonces se procede a emitir el IA; caso contrario se emite una NR.
 \end{enumerate}
 
 \begin{center}
@@ -136,7 +143,7 @@
   \includegraphics{./Images/Simbolos/simbolo-Operacion.png}
 \end{center}
 \begin{enumerate}
-  \item Almac\'en de Materia Prima:
+  \item Almac\'en de Materia Prima: Agrega en la columna correspondiente del formulario PM, la cantidad de materia prima que efectivamente se est\'e despachando.
 \end{enumerate}
 
 \begin{center}
@@ -198,7 +205,13 @@
 
 \pagebreak
 \section{Normas de control interno generales y específicas de Producci\'on}
-\emph{\textbf{TODO}}
+\begin{itemize}
+  \item \textbf{Existencia de inventario permanente o registros contables apropiados:} realización de recuentos físicos periódicos de las existencias, con toma de inventario rotativos, sorpresivos y realizados por personas ajenas a quienes detentan la custodia física de dichos bienes, y de quienes registran los movimientos de los mismos. El inventario físico contribuye a controlar y ajustar los movimientos físicos, evaluar la eficiencia operativa en el manejo de las existencias y sus registraciones, constatar la existencia física y controlar la imputación y valuación contable. Normalmente se debe efectuar un inventario físico total a fin del ejercicio contable.
+  \item \textbf{Ajustes de inventario:} Los ajustes por diferencias de inventario deberán estar analizados, justificados y autorizados por un funcionario responsable que sea ajeno a la custodia de los bienes.
+  \item \textbf{Custodia de las existencias:} La responsabilidad por la custodia y control de los bienes en existencia, debe recaer sobre una sola persona, a quien se le deben asegurar todas las facilidades de control. El local del depósito debe permitir una protección física adecuada de los bienes.
+  Las condiciones del local deben garantizar que no se produzcan deterioros en los productos ( humedad, temperatura, ventilación, etc.)
+  \item \textbf{Documentación de todo movimiento de existencias:} Todo movimiento de los bienes en Almacenes, debe estar amparado por el respectivo comprobante, debidamente firmado por un responsable con las atribuciones para realizar los respectivos movimientos.
+  \item \textbf{Fijación de puntos de pedido, stocks mínimos y lotes óptimos:} Se recomienda la fijación de stocks de pedido, mínimos, máximos y lotes óptimos de pedido o criterios especiales de reaprovisionamiento.
+  \item \textbf{Contratación de seguros adecuados}
+\end{itemize}
 
-\subsection{Normas Específicas}
-\emph{\textbf{TODO}}
