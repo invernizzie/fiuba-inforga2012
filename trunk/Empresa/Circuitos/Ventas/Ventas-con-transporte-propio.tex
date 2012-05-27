@@ -61,13 +61,67 @@ A su vez, realiza un control antes de que dichos documentos sean enviados al cli
 
 \subsubsection{Formularios de Ventas}
 
-%%%%%%%%%%%%%%%%%%% TODO!!! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%               describir cada campo                     %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin {description}
- \includegraphics{./Images/FormulariosIEP/Factura.png}
+\paragraph{\underline{Factura}}
+\begin{flushleft}
+  \includegraphics[scale=0.85]{./Images/FormulariosIEP/Factura.png}\end{flushleft}
+  \begin{itemize}
+	  \item \textbf{Objetivo:} Con este documento se notifica al cliente que efectu\'o la compra el monto total a pagar. Se especifica el remito asociado, los productos comprados con detalle de precios, los impuestos incluidos y las condiciones de pago.
+	  \item \textbf{Alcance:} Es un documento entre la empresa y el cliente.
+	  \item \textbf{Emisor:} Contadur\'ia.
+	  \item \textbf{Cantidad de Copias Emitidas:} Original y Copia.
+	  \item \textbf{Sector receptor:} Expedici\'on, para su env\'io al cliente.
+	  \item \textbf{Descripci\'on de Campos de la factura}
+  \end{itemize}
+
+  \begin{enumerate}
+   \item Empresa emisora: Raz\'on Social de la empresa
+   \item Empresa emisora: Información de Sucursal. Domicilio y N\'umero de Tel\'efono
+   \item Empresa emisora: Responsabilidad frente al IVA
+   \item Tipo de Factura (A en este caso)
+   \item N\'umero de Factura
+   \item Fecha de emisi\'on
+   \item Empresa emisora: CUIT
+   \item Empresa emisora: C\'odigo de Ingresos Brutos
+   \item Empresa emisora: Fecha de inicio de actividades
+   \item Cliente: Raz\'on Social 
+   \item Cliente: Domicilio
+   \item Cliente: Responsabilidad frente al IVA
+   \item C\'odigo del cliente al que se le factura y C\'odigo de Vendedor (Opcional)
+   \item Vencimiento de la Factura
+   \item Condici\'on de entrega
+   \item Cliente: CUIT
+   \item Condici\'on de Venta / Tipo de Pago.
+   \item Remito asociado a la Venta.
+   \item Detalle de la factura: C\'odigo interno del \'item, Cantidad del \'item
+   \item Detalle de la factura: Descripci\'on del \'item. La partida asociada es opcional
+   \item Detalle de la factura: Precio unitario del \'item. El descuento del \'item es opcional.
+   \item Detalle de la factura: Precio total del \'item (cantidad * precio unitario)
+   \item Detalle de la factura: Subtotal de items (suma de los totales de \'item)
+   \item Detalle de la factura: Detalle de Regímenes Especiales que aplican.
+   \item Total de Impuestos que aplican a la venta (sin IVA).
+   \item Subtotal con Impuestos y sin IVA.
+   \item IVA discriminado.
+   \item Subtotal con Impuestos e IVA, sin Reg\'imenes Especiales.
+   \item Total de Reg\'imenes Especiales.
+   \item Total del Importe de la Factura.
+   \item Importe de la factura en palabras.(Opcional)
+   \item C\'odigo de Barras de la factura. El c\'odigo tambi\'en se encuentra en forma num\'erica. 
+   \item Fecha de vencimiento del C\'odigo de Impresi\'on
+   \item CAE: C\'odigo de Autorizaci\'on Electr\'onico.
+   \item Copia de la facura: Original, Copia, Triplicado, etc
+      
+  \end{enumerate}
+
+\paragraph{\underline{Remito}}
  \includegraphics{./Images/FormulariosIEP/Remito.png}
-\end {description}
+ \begin{itemize}
+	  \item \textbf{Objetivo:} En este documento se detallan los productos a ser enviados al cliente. No se incluyen detalles de precios y se especifica la contidad de bultos.
+	  \item \textbf{Alcance:} Es un documento entre la empresa y el cliente.
+	  \item \textbf{Emisor:} Almacén 1.
+	  \item \textbf{Cantidad de Copias Emitidas:} Original y Copia.
+	  \item \textbf{Sector receptor:} Expedición, para su envío al cliente.
+ \end{itemize}
+
 
 
 
