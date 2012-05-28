@@ -1,0 +1,10 @@
+Preguntas Cobranzas
+===================
+
+1- Para cobrar las facturas vencidas, como es el procedimiento ? Se envia un cobrador al cliente a cobrar las facturas ?
+2- Que documentos se utilizan a la hora de cobrar las facturas ? Se genera una lista de facturas a cobrar y se manda un cobrador con la misma?
+3- Si se envia un cobrador, con que documentacion se envia al mismo ? 
+4- Sucede que algun cliente pague una factura en la empresa misma de ustedes ?
+5- Que metodos de cobro se utilizan ? cheques, transferencias, efectivo ?
+6- En caso de enviar un cobrador al cliente a cobrar las facturas, quien emite el recibo del cheque que se le entrega a este ? Lo hace el mismo en el
+momento en que recibe el cheque ? Ya va con el recibo confeccionado ?
