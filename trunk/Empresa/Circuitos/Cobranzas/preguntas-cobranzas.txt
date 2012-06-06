@@ -8,3 +8,15 @@ Preguntas Cobranzas
 5- Que metodos de cobro se utilizan ? cheques, transferencias, efectivo ?
 6- En caso de enviar un cobrador al cliente a cobrar las facturas, quien emite el recibo del cheque que se le entrega a este ? Lo hace el mismo en el
 momento en que recibe el cheque ? Ya va con el recibo confeccionado ?
+
+
+Preguntas a enviar
+==================
+
+A la hora de cobrarle a los clientes:
+
+- Como se realiza el reclamo de la factura vencida ? Se manda un cobrador, o se manda un mail u otro metodo ? En estos casos con que documento se acompaña el reclamo ? 
+- A la hora del cobro, como es que se cobra ? Usan transferencias bancarias, cheques, efectivo ?
+- Como se sabe si el cliente pago o no una factura ? Esto lo indica el sistema informatico que poseen ?
+- Cuando se recibe el cobro, este de alguna forma se hace conocer a algun otro departamento como puede ser contaduria para asentar el pago ?
+- En el caso que utilicen cheques a la hora de cobrar, que area los recibe ? Acaso hay algun sector de tesoreria donde se llevan luego estos valores ?
