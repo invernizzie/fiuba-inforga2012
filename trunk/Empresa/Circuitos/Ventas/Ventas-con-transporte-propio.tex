@@ -1,28 +1,23 @@
-\subsection{Pedido de ventas con transporte propio}
-
-%!!! cambiar esto por el diagrama de visio cuando este :)
-\subsubsection{Cursograma}
+\section{Cursograma de Ventas}
 \includegraphics [angle=90]{Empresa/Circuitos/Ventas/ventas.jpg}
 
 \pagebreak
+\section{Procedimiento de Ventas}
+  \begin{enumerate}
+  \item El cliente solicita un pedido
+  \item Ventas genera la Solicitud de Pedido de Ventas (SPV) especificando los detalles de la venta (productos, plazo de entrega tentativo).
+	  Firma la SPV y envia una copia a Producci\'on. Archiva temporalmente esta solicitud hasta que concluya el pedido.
+  \item Producci\'on recibe la SPV y verifica que cuenta con stock. De no poseer stock necesario se procede a realizar el CNR de Producci\'on. 
+	  En caso de contar con el producto solicitado, se envia ``una orden de pedido de productos'' a Almac\'en 2 ( almacén de productos terminados ).
+  \item Almac\'en 2 recibe la orden de producto ( ya cuenta con el producto, ya sea porque ten\'ia stock o porque lo ha producido especialmente ) y lo env\'ia al  Almac\'en 1 ( Expedici\'on).
+  \item Almac\'en 1 prepara los productos para su entrega y genera el remito correspondiente, con 2 copias. Entrega el producto al Transportista con los remitos original y copia para que sean firmados por el cliente y env\'ia otra copia a Contadur\'ia.
+  \item Contadur\'ia genera un listado de remitos sin facturar asociados a esa SPV, y genera la factura correspondiente. Se envia el original de la factura al Transportista para su env\'io.
+  \item Transportista recibe original y copia del remito y la factura. Env\'ia el pedido junto con la documentaci\'on al cliente.El cliente recibe el original de la factura y del remito, y firma la copia del remito.
+  \item Almacen 1 recibe la copia del remito firmado por el cliente y cierra la orden de pedido. 
+  \item Contadur\'ia recibe la copia de la factura y el remito firmado por el cliente y la asienta como recibida por el cliente. El pago de la factura es parte del CNR de Cobros.Contaduria
+  \end{enumerate}
 
-\subsubsection{Procedimiento}
-\begin{enumerate}
-\item El cliente solicita un pedido
-\item Ventas genera la Solicitud de Pedido de Ventas (SPV) especificando los detalles de la venta (productos, plazo de entrega tentativo).
-	Firma la SPV y envia una copia a Producci\'on. Archiva temporalmente esta solicitud hasta que concluya el pedido.
-\item Producci\'on recibe la SPV y verifica que cuenta con stock. De no poseer stock necesario se procede a realizar el CNR de Producci\'on. 
-	En caso de contar con el producto solicitado, se envia ``una orden de pedido de productos'' a Almac\'en 2 ( almacén de productos terminados ).
-\item Almac\'en 2 recibe la orden de producto ( ya cuenta con el producto, ya sea porque ten\'ia stock o porque lo ha producido especialmente ) y lo env\'ia al  Almac\'en 1 ( Expedici\'on).
-\item Almac\'en 1 prepara los productos para su entrega y genera el remito correspondiente, con 2 copias. Entrega el producto al Transportista con los remitos original y copia para que sean firmados por el cliente y env\'ia otra copia a Contadur\'ia.
-\item Contadur\'ia genera un listado de remitos sin facturar asociados a esa SPV, y genera la factura correspondiente. Se envia el original de la factura al Transportista para su env\'io.
-\item Transportista recibe original y copia del remito y la factura. Env\'ia el pedido junto con la documentaci\'on al cliente.El cliente recibe el original de la factura y del remito, y firma la copia del remito.
-\item Almacen 1 recibe la copia del remito firmado por el cliente y cierra la orden de pedido. 
-\item Contadur\'ia recibe la copia de la factura y el remito firmado por el cliente y la asienta como recibida por el cliente. El pago de la factura es parte del CNR de Cobros.Contaduria
-\end{enumerate}
-
-\subsubsection{Entrevista}
-
+\subsection{Entrevista}
 Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ventas que la empresa puso a nuestra disposici\'on, surgi\'o la necesidad de realizar una entrevista para aclarar ciertos puntos que no quedaban claros con nuestro contacto. Los puntos en cuesti\'on fueron los siguientes:
 
 \begin{description}
@@ -38,7 +33,77 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
 	
 \end{description}
 
-\subsubsection{Normas de Control Interno}
+\pagebreak
+\section{Formularios de Ventas}
+
+\subsection{Factura}
+\begin{center}
+ \includegraphics[scale=0.85,keepaspectratio=true]{./Images/FormulariosIEP/Factura.png}
+ % Factura.png: 749x973 pixel, 96dpi, 19.82x25.75 cm, bb=0 0 562 730
+\end{center}
+\begin{itemize}
+  \item \textbf{Objetivo:} Con este documento se notifica al cliente que efectu\'o la compra el monto total a pagar. Se especifica el remito asociado, los productos comprados con detalle de precios, los impuestos incluidos y las condiciones de pago.
+  \item \textbf{Alcance:} Es un documento entre la empresa y el cliente.
+  \item \textbf{Emisor:} Contadur\'ia.
+  \item \textbf{Cantidad de Copias Emitidas:} Original y Copia.
+  \item \textbf{Sector receptor:} Expedici\'on, para su env\'io al cliente.
+\end{itemize}
+\subsubsection{Descripci\'on campos de la Factura}
+\begin{enumerate}
+  \item Empresa emisora: Raz\'on Social de la empresa
+  \item Empresa emisora: Información de Sucursal. Domicilio y N\'umero de Tel\'efono
+  \item Empresa emisora: Responsabilidad frente al IVA
+  \item Tipo de Factura (A en este caso)
+  \item N\'umero de Factura
+  \item Fecha de emisi\'on
+  \item Empresa emisora: CUIT
+  \item Empresa emisora: C\'odigo de Ingresos Brutos
+  \item Empresa emisora: Fecha de inicio de actividades
+  \item Cliente: Raz\'on Social 
+  \item Cliente: Domicilio
+  \item Cliente: Responsabilidad frente al IVA
+  \item C\'odigo del cliente al que se le factura y C\'odigo de Vendedor (Opcional)
+  \item Vencimiento de la Factura
+  \item Condici\'on de entrega
+  \item Cliente: CUIT
+  \item Condici\'on de Venta / Tipo de Pago.
+  \item Remito asociado a la Venta.
+  \item Detalle de la factura: C\'odigo interno del \'item, Cantidad del \'item
+  \item Detalle de la factura: Descripci\'on del \'item. La partida asociada es opcional
+  \item Detalle de la factura: Precio unitario del \'item. El descuento del \'item es opcional.
+  \item Detalle de la factura: Precio total del \'item (cantidad * precio unitario)
+  \item Detalle de la factura: Subtotal de items (suma de los totales de \'item)
+  \item Detalle de la factura: Detalle de Regímenes Especiales que aplican.
+  \item Total de Impuestos que aplican a la venta (sin IVA).
+  \item Subtotal con Impuestos y sin IVA.
+  \item IVA discriminado.
+  \item Subtotal con Impuestos e IVA, sin Reg\'imenes Especiales.
+  \item Total de Reg\'imenes Especiales.
+  \item Total del Importe de la Factura.
+  \item Importe de la factura en palabras.(Opcional)
+  \item C\'odigo de Barras de la factura. El c\'odigo tambi\'en se encuentra en forma num\'erica. 
+  \item Fecha de vencimiento del C\'odigo de Impresi\'on
+  \item CAE: C\'odigo de Autorizaci\'on Electr\'onico.
+  \item Copia de la facura: Original, Copia, Triplicado, etc
+\end{enumerate}
+
+\subsection{Remito}
+
+\begin{center}
+ \includegraphics[scale=0.90,keepaspectratio=true]{./Images/FormulariosIEP/Remito.png}
+ % Remito.png: 713x959 pixel, 96dpi, 18.87x25.38 cm, bb=0 0 535 720
+\end{center}
+\begin{itemize}
+  \item \textbf{Objetivo:} En este documento se detallan los productos a ser enviados al cliente. No se incluyen detalles de precios y se especifica la contidad de bultos.
+  \item \textbf{Alcance:} Es un documento entre la empresa y el cliente.
+  \item \textbf{Emisor:} Almacén 1.
+  \item \textbf{Cantidad de Copias Emitidas:} Original y Copia.
+  \item \textbf{Sector receptor:} Expedición, para su envío al cliente.
+ \end{itemize}
+\subsubsection{Descripci\'on campos del Remito}
+
+\pagebreak
+\section{Normas de Control Interno de Ventas}
 \begin{itemize}
  \item	{\bf Separaci\'on de funciones: } El encargado de ventas no debe poseer acceso a las registraciones de stock ni a la modificaci\'on de cuentas del cliente.
 Quien vende no puede otorgar cr\'editos ni encargarse de la facturaci\'on. Dentro del sector de Ventas existe una clara divisi\'on entre la parte encargada de la atenci\'on a los clientes 
@@ -51,77 +116,4 @@ Almac\'en 1 y 2 y Expedici\'on se documenta el transpaso de mercader\'ia utiliza
 utilizando el sistema inform\'atico, resulta complicado alterar la numeraci\'on dado que la misma es autogenerada utilizando una secuencia.
 \item	{\bf Control de Facturaci\'on: } Contadur\'ia realiza un control cruzado de la facturaci\'on y remitos. Contadur\'ia siempre conserva una copia de las facturas y remitos emitidos. 
 A su vez, realiza un control antes de que dichos documentos sean enviados al cliente.
-  
-
 \end{itemize}
-
-
-
-\pagebreak
-
-\subsubsection{Formularios de Ventas}
-
-\paragraph{\underline{Factura}}
-\begin{flushleft}
-  \includegraphics[scale=0.85]{./Images/FormulariosIEP/Factura.png}\end{flushleft}
-  \begin{itemize}
-	  \item \textbf{Objetivo:} Con este documento se notifica al cliente que efectu\'o la compra el monto total a pagar. Se especifica el remito asociado, los productos comprados con detalle de precios, los impuestos incluidos y las condiciones de pago.
-	  \item \textbf{Alcance:} Es un documento entre la empresa y el cliente.
-	  \item \textbf{Emisor:} Contadur\'ia.
-	  \item \textbf{Cantidad de Copias Emitidas:} Original y Copia.
-	  \item \textbf{Sector receptor:} Expedici\'on, para su env\'io al cliente.
-	  \item \textbf{Descripci\'on de Campos de la factura}
-  \end{itemize}
-
-  \begin{enumerate}
-   \item Empresa emisora: Raz\'on Social de la empresa
-   \item Empresa emisora: Información de Sucursal. Domicilio y N\'umero de Tel\'efono
-   \item Empresa emisora: Responsabilidad frente al IVA
-   \item Tipo de Factura (A en este caso)
-   \item N\'umero de Factura
-   \item Fecha de emisi\'on
-   \item Empresa emisora: CUIT
-   \item Empresa emisora: C\'odigo de Ingresos Brutos
-   \item Empresa emisora: Fecha de inicio de actividades
-   \item Cliente: Raz\'on Social 
-   \item Cliente: Domicilio
-   \item Cliente: Responsabilidad frente al IVA
-   \item C\'odigo del cliente al que se le factura y C\'odigo de Vendedor (Opcional)
-   \item Vencimiento de la Factura
-   \item Condici\'on de entrega
-   \item Cliente: CUIT
-   \item Condici\'on de Venta / Tipo de Pago.
-   \item Remito asociado a la Venta.
-   \item Detalle de la factura: C\'odigo interno del \'item, Cantidad del \'item
-   \item Detalle de la factura: Descripci\'on del \'item. La partida asociada es opcional
-   \item Detalle de la factura: Precio unitario del \'item. El descuento del \'item es opcional.
-   \item Detalle de la factura: Precio total del \'item (cantidad * precio unitario)
-   \item Detalle de la factura: Subtotal de items (suma de los totales de \'item)
-   \item Detalle de la factura: Detalle de Regímenes Especiales que aplican.
-   \item Total de Impuestos que aplican a la venta (sin IVA).
-   \item Subtotal con Impuestos y sin IVA.
-   \item IVA discriminado.
-   \item Subtotal con Impuestos e IVA, sin Reg\'imenes Especiales.
-   \item Total de Reg\'imenes Especiales.
-   \item Total del Importe de la Factura.
-   \item Importe de la factura en palabras.(Opcional)
-   \item C\'odigo de Barras de la factura. El c\'odigo tambi\'en se encuentra en forma num\'erica. 
-   \item Fecha de vencimiento del C\'odigo de Impresi\'on
-   \item CAE: C\'odigo de Autorizaci\'on Electr\'onico.
-   \item Copia de la facura: Original, Copia, Triplicado, etc
-      
-  \end{enumerate}
-
-\paragraph{\underline{Remito}}
- \includegraphics{./Images/FormulariosIEP/Remito.png}
- \begin{itemize}
-	  \item \textbf{Objetivo:} En este documento se detallan los productos a ser enviados al cliente. No se incluyen detalles de precios y se especifica la contidad de bultos.
-	  \item \textbf{Alcance:} Es un documento entre la empresa y el cliente.
-	  \item \textbf{Emisor:} Almacén 1.
-	  \item \textbf{Cantidad de Copias Emitidas:} Original y Copia.
-	  \item \textbf{Sector receptor:} Expedición, para su envío al cliente.
- \end{itemize}
-
-
-
-
