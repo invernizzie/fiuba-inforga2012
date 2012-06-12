@@ -16,10 +16,8 @@
   \item Almacen 1 recibe la copia del remito firmado por el cliente y cierra la orden de pedido. 
   \item Contadur\'ia recibe la copia de la factura y el remito firmado por el cliente y la asienta como recibida por el cliente. El pago de la factura es parte del CNR de Cobros.Contaduria
   \end{enumerate}
-
 \subsection{Entrevista}
 Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ventas que la empresa puso a nuestra disposici\'on, surgi\'o la necesidad de realizar una entrevista para aclarar ciertos puntos que no quedaban claros con nuestro contacto. Los puntos en cuesti\'on fueron los siguientes:
-
 \begin{description}
  \item \underline{Ventas a Clientes}: \\
 	Es el Centro de Atenci\'ion al Cliente (\textit{CAC}) quien interact\'ua con los clientes para realizar las ventas. Las ventas a clientes las ventas se realizan a partir de un pedido de cotizaci\'on confeccionado por el CAC. Posteriormente, el CAC formaliza el pedido de venta al recibir una Orden de Compra del cliente. Internamente, el CAC realiza una Solicitud de Pedido de Ventas (SPV).  \\
@@ -30,8 +28,11 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
 	El medio de comunicaci\'on entre almacenes es electr\'onico, es decir, se realiza a trav\'es del sistema Bejerman, y as\'i se realizan las transferencias ``inter-dep\'osito''. Los documentos internos s\'olo se imprimen en papel cuando resulta necesario, y en casos particulares. En una \'epoca se utilizaban fichas y vale de materiales, pero fueron reemplazados por el sistema inform\'atico. Lo mismo sucede con el sector de Producci\'on, que maneja el movimiento de materiales mediante el sistema Bejerman.\\
 	El sector de Producci\'on recibe por sistema la carga de datos del \'area de Ventas (CAC), formaliz\'andolo como ``Orden de Pedido''. En funci\'on a ello elabora una ``Orden de Montaje'', donde el sistema carga los elementos necesarios para confeccionar el pedido solicitado (las distintas partes y piezas para armar la luminaria). Terminado el producto, \'este se declara en el Dep\'osito Producto Terminado (02). Luego, el sector de Almacenes realiza por sistema la transferencia del producto, desde el 02 al Deposito Principal (01), y es desde aqu\'i que el \'area de Expedici\'on puede generar posteriormente el remito para despachar la mercader\'ia.  
 	El transportista carga la mercader\'ia seg\'un la información emanada de los remitos, controlando f\'isicamente la carga.  Luego se le confecciona una Hoja de Ruta con el itinerario diario y por ultimo se le emite un permiso ante el ARBA, en caso que la mercader\'ia que se transporte supere los \$20.000.-   
-	
 \end{description}
+
+\pagebreak
+\section{Manual del Cursograma de Cobranzas}
+
 
 \pagebreak
 \section{Formularios de Ventas}
@@ -88,7 +89,6 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
 \end{enumerate}
 
 \subsection{Remito}
-
 \begin{center}
  \includegraphics[scale=0.90,keepaspectratio=true]{./Images/FormulariosIEP/Remito.png}
  % Remito.png: 713x959 pixel, 96dpi, 18.87x25.38 cm, bb=0 0 535 720
@@ -108,12 +108,12 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
  \item	{\bf Separaci\'on de funciones: } El encargado de ventas no debe poseer acceso a las registraciones de stock ni a la modificaci\'on de cuentas del cliente.
 Quien vende no puede otorgar cr\'editos ni encargarse de la facturaci\'on. Dentro del sector de Ventas existe una clara divisi\'on entre la parte encargada de la atenci\'on a los clientes 
 y la parte encargada de la venta en s\'i misma.
-\item	{\bf Aprobaci\'on de la venta: } Las pol\'iticas de ventas, otorgamiento de cr\'editos y precios son dispuestas por la Direcci\'on General.
+  \item	{\bf Aprobaci\'on de la venta: } Las pol\'iticas de ventas, otorgamiento de cr\'editos y precios son dispuestas por la Direcci\'on General.
 La aprobaci\'on de la venta es realizada por el responsable de cr\'editos dado que es el que conoce el estado financiero de los clientes.
-\item	{\bf Movimiento de bienes: } La circulaci\'on de mercader\'ias est\'a respaldada por comprobantes firmados por el responsable del sector que los recibe. En los sectores de Producci\'on, 
+  \item	{\bf Movimiento de bienes: } La circulaci\'on de mercader\'ias est\'a respaldada por comprobantes firmados por el responsable del sector que los recibe. En los sectores de Producci\'on, 
 Almac\'en 1 y 2 y Expedici\'on se documenta el transpaso de mercader\'ia utilizando el correspondiente m\'odulo del sistema inform\'atico de Bejerman.
-\item	{\bf Documentaci\'on prenumerada: } Toda documantaci\'on emitida debe estar prenumerada y se archivan en orden num\'erico, incluso las anuladas. Dado que todos los documentos se generan 
+  \item	{\bf Documentaci\'on prenumerada: } Toda documantaci\'on emitida debe estar prenumerada y se archivan en orden num\'erico, incluso las anuladas. Dado que todos los documentos se generan 
 utilizando el sistema inform\'atico, resulta complicado alterar la numeraci\'on dado que la misma es autogenerada utilizando una secuencia.
-\item	{\bf Control de Facturaci\'on: } Contadur\'ia realiza un control cruzado de la facturaci\'on y remitos. Contadur\'ia siempre conserva una copia de las facturas y remitos emitidos. 
+  \item	{\bf Control de Facturaci\'on: } Contadur\'ia realiza un control cruzado de la facturaci\'on y remitos. Contadur\'ia siempre conserva una copia de las facturas y remitos emitidos. 
 A su vez, realiza un control antes de que dichos documentos sean enviados al cliente.
 \end{itemize}
