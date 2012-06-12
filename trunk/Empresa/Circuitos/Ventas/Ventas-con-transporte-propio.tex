@@ -1,21 +1,21 @@
 \section{Cursograma de Ventas}
-\includegraphics [angle=90]{Empresa/Circuitos/Ventas/ventas.jpg}
+\includegraphics [scale=0.65, angle=90]{Empresa/Circuitos/Ventas/ventas.jpg}
 
 \pagebreak
 \section{Procedimiento de Ventas}
-  \begin{enumerate}
-  \item El cliente solicita un pedido
-  \item Ventas genera la Solicitud de Pedido de Ventas (SPV) especificando los detalles de la venta (productos, plazo de entrega tentativo).
-	  Firma la SPV y envia una copia a Producci\'on. Archiva temporalmente esta solicitud hasta que concluya el pedido.
-  \item Producci\'on recibe la SPV y verifica que cuenta con stock. De no poseer stock necesario se procede a realizar el CNR de Producci\'on. 
-	  En caso de contar con el producto solicitado, se envia ``una orden de pedido de productos'' a Almac\'en 2 ( almacén de productos terminados ).
-  \item Almac\'en 2 recibe la orden de producto ( ya cuenta con el producto, ya sea porque ten\'ia stock o porque lo ha producido especialmente ) y lo env\'ia al  Almac\'en 1 ( Expedici\'on).
-  \item Almac\'en 1 prepara los productos para su entrega y genera el remito correspondiente, con 2 copias. Entrega el producto al Transportista con los remitos original y copia para que sean firmados por el cliente y env\'ia otra copia a Contadur\'ia.
-  \item Contadur\'ia genera un listado de remitos sin facturar asociados a esa SPV, y genera la factura correspondiente. Se envia el original de la factura al Transportista para su env\'io.
-  \item Transportista recibe original y copia del remito y la factura. Env\'ia el pedido junto con la documentaci\'on al cliente.El cliente recibe el original de la factura y del remito, y firma la copia del remito.
-  \item Almacen 1 recibe la copia del remito firmado por el cliente y cierra la orden de pedido. 
-  \item Contadur\'ia recibe la copia de la factura y el remito firmado por el cliente y la asienta como recibida por el cliente. El pago de la factura es parte del CNR de Cobros.Contaduria
-  \end{enumerate}
+ \begin{description}
+	\item[Cliente] El cliente solicita un pedido emitiendo una 'Orden de Compra' (OC).
+	\item[Ventas] El área de ventas recibe la 'Orden de Compra' de parte del cliente y de esta manera genera la 'Solicitud de Pedido de Ventas' (SPV) especificando los detalles de la venta como por ejemplo, productos y plazo de entrega tentativo. Firma la SPV y envía una copia a Producción. Registra en el sistema del acciones realizas y archiva en forma definitiva la 'Orden de Compra'.
+	\item[Producción] Producción recibe la SPV y verifica que cuenta con stock suficiente. De no poseer stock necesario se procede a realizar el 'Circuito no relevado de de Producción' (CNR Producción). En caso de contar con el producto solicitado, genera una 'Orden de Pedido de Productos' y la envía a Almacén 2 (Almacén de roductos terminados).  Registra en el sistema del acciones realizas y archiva en forma definitiva la 'Solicitud de Pedido de Ventas'. 
+	\item[Almacén 2] Almacén 2 recibe la 'Orden de Pedido de Productos', ya cuenta con el producto (ya sea porque tenía stock o porque lo ha producido especialmente) y envía el producto junto con la documentación a Almacén 1. Registra en el sistema del acciones realizas.
+	\item[Almacén 1] Almacén 1 prepara los productos para su entrega y genera el 'Remito' correspondiente por triplicado. Entrega el producto al Transportista con los remitos original y copia para que sean firmados por el cliente, y entrega la otra copia a Contaduría. Registra en el sistema del acciones realizas y archiva en forma definitiva la 'Orden de Pedido de Productos'.
+	\item[Contaduría] Contaduría genera un listado de remitos sin facturar asociados a la venta, y genera la 'Factura' correspondiente por duplicado. Registra en el sistema del acciones realizas y envía el original y copia de la factura al Transportista para su envío.
+	\item[Transportista] Transportista recibe los remitos, las facturas y la carga a ser enviada. Envía el pedido junto con la documentación al cliente. 
+	\item[Cliente] El cliente recibe los remito, las facturas y el pedido. Chequea la mercadería recibida junto con los documentos original, y firmas las copias de los mismos.
+	\item[Almacén 1] Almacen 1 recibe la copia del remito firmado por el cliente y cierra la orden de pedido. 
+	\item[Contaduría] Contaduría recibe la copia de la factura y el remito firmado por el cliente y la asienta como recibida por el cliente. El pago de la factura es parte del 'Circuito no relevado de Cobranzas' (CNR Cobranzas)
+\end{description}
+
 \subsection{Entrevista}
 Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ventas que la empresa puso a nuestra disposici\'on, surgi\'o la necesidad de realizar una entrevista para aclarar ciertos puntos que no quedaban claros con nuestro contacto. Los puntos en cuesti\'on fueron los siguientes:
 \begin{description}
@@ -31,7 +31,132 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
 \end{description}
 
 \pagebreak
-\section{Manual del Cursograma de Cobranzas}
+\section{Manual del Cursograma de Ventas}
+
+\begin{center}\textbf{Sectores intervinientes}\end{center}
+\begin{itemize}
+  \item Cliente
+  \item Ventas
+  \item Producción
+  \item Almacen 2
+  \item Almacen 1
+  \item Contaduría
+  \item Transportista
+\end{itemize}
+
+\begin{center}
+  \textbf{Documentos}
+  \includegraphics{./Images/Simbolos/simbolo-Documentos.png}
+\end{center}
+\begin{enumerate}
+  \item Orden de Compra (OC).
+  \item Solicitud de Pedido de Ventas (SPV).
+  \item Orden de Pedido de Productos (OPP).
+  \item Remito (RTO).
+  \item Factura (F).
+\end{enumerate}
+
+\begin{center}
+  \textbf{Emisión de Documentos}
+  \includegraphics{./Images/Simbolos/simbolo-Emision-de-Documentos.png}
+\end{center}
+\begin{enumerate}
+  \item Cliente emite una Orden de Compra.
+  \item Ventas emite una Solicitud de Pedido de Ventas. 
+  \item Producción emite una Orden de Pedido de Productos.
+  \item Almacén 1 emite remitos por triplicado.
+  \item Contaduría emite facturas por duplicado.
+\end{enumerate}
+
+\begin{center}
+  \textbf{Firma}
+  \includegraphics{./Images/Simbolos/simbolo-Firma.png}
+\end{center}
+\begin{enumerate}
+  \item Ventas firma la Solicitud de Pedido de Ventas.
+  \item Producción firma la Orden de Pedido de Productos.
+  \item Almacén 2 firma la Orden de Pedido de Productos.
+  \item Cliente firma las copias de remito y factura.
+\end{enumerate}
+
+\begin{center}
+  \textbf{Distribución}
+  \includegraphics{./Images/Simbolos/simbolo-Distribucion.png}
+\end{center}
+\begin{enumerate}
+  \item Ventas distribuye Solicitud de Pedido de Ventas.
+  \item Producción distribuye Orden de Pedido de Productos.
+  \item Almacen 2 distribuye Orden de Pedido de Productos junto con el pedido.
+  \item Almacen 1 remitos por triplicado junto con el pedidoo.
+  \item Contaduría distribuye las copias de los remitos y las facturas.
+  \item Transportista distribuye los remitos, las facturas y el pedido.
+  \item El Cliente distribuye las copias de remito y facturas firmadas.
+\end{enumerate}
+
+\begin{center}
+  \textbf{Almacenamiento Transitorio}
+  \includegraphics{./Images/Simbolos/simbolo-Almacenamiento-Transitorio.png}
+\end{center}
+\begin{enumerate}
+  \item Cliente almacena Orden de Compra.
+  \item Contaduría almacena una ficha del cliente.
+  \item Transportista almacena los remitos, las facturas y el pedido.
+\end{enumerate}
+
+\begin{center}
+  \textbf{Control y verificación}
+  \includegraphics{./Images/Simbolos/simbolo-Control-y-Verificacion.png}
+\end{center}
+\begin{enumerate}
+	\item Producción controla si cuenta con stock suficiente con la Solicitud de Pedido de Ventas.
+	\item El cliente controla si el pedido recibio es realmente lo que pidió con la Orden de Compra.
+\end{enumerate}
+\pagebreak
+
+\begin{center}
+  \textbf{Decisión}
+  \includegraphics{./Images/Simbolos/simbolo-Decision.png}
+\end{center}
+\begin{enumerate}
+  \item Producción controla el stock. De no poseer procede a realizar el 'Circuito no relevado de de Producción' (CNR Producción). En caso de contar con el producto solicitado, genera una 'Orden de Pedido de Productos'.
+  \item Cliente controla el pedido recibido. En caso de existir algún inconveniente ejecuta parto de un 'Circuito no relevado de Compras'.
+\end{enumerate}
+
+\begin{center}
+  \textbf{Registro}
+  \includegraphics{./Images/Simbolos/simbolo-Registro.png}
+\end{center}
+\begin{enumerate}
+  \item Ventas registra la venta en curso.
+  \item Almacen 2 registra la entrega de mercadería.
+  \item Almacen 1 registra la entrega de mercadería.
+  \item Contaduría registra la emisión de la factura.
+  \item Almacen 1 registra el arribo de la copia del remito firmada por el cliente.
+  \item Contaduría registra el arribo de la copia de la factura firmada por el cliente.  
+\end{enumerate}
+
+\begin{center}
+  \textbf{Almacenamiento definitivo}
+  \includegraphics{./Images/Simbolos/simbolo-Almacenamiento-Definitivo.png}
+\end{center}
+\begin{enumerate}
+  \item Ventas almacena la Orden de Compra.
+  \item Producción almacena la Solicitud de Pedido de Ventas.
+  \item Almacen 1 almacena la Orden de Pedido de Productos y la copia firmada del remito.
+  \item Contaduría almacena la copia de la factura y el remito firmada.  
+\end{enumerate}
+
+\begin{center}
+  \textbf{Circuito no relevado}
+  \includegraphics{./Images/Simbolos/simbolo-CNR.png}
+  % simbolo-CNR.png: 73x44 pixel, 96dpi, 1.93x1.16 cm, bb=0 0 55 33
+\end{center}
+\begin{enumerate}
+  \item Compras (circuito del cliente).
+  \item Pagos (circuito del cliente).
+  \item Cobranzas.
+\end{enumerate}
+
 
 
 \pagebreak
