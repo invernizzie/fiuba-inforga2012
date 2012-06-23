@@ -9,7 +9,7 @@
 \item[Producción] Tras detectar necesidad de materiales y luego de chequear las existencias, si el stock del sector de Producción alcanza el punto de pedido, este emite un Requerimiento de Compra (RC) en original y copia, el nivel autorizante firma el original y lo envía al sector de Compras, se archiva la copia.
 \item[Compras] Recibido el Requerimiento de Compra, el área de Compras consulta catálogos y listas de precios actualizados de los proveedores, y en función de ellos confecciona una Orden de Compra (OC) original y cuatro copias, las firma y distribuye original a Dirección General, una copia a Recepción, una a Finanzas, una a Calidad y almacena la última copia.
 \item [Dirección General] Tras recibir la Orden de Compra del sector de Compras, la Dirección General la controla, y en caso de aprobarla la firma y envía al sector de Ventas del Proveedor previamente seleccionado.
-\item [Proveedor] Una vez recibida la Orden de Compra firmada por Compras y Dirección General el Proveedor, según su circuito de ventas,  decide aceptar o rechazar la Orden de Compra. En caso de aceptarla, el Proveedor confecciona Remito (Rto) por duplicado y envía original y una copia junto con los materiales al sector de Recepción.
+\item [Proveedor] Una vez recibida la Orden de Compra firmada por Compras y Dirección General el, Proveedor, según su circuito de ventas,  decide aceptar o rechazar la Orden de Compra. En caso de aceptarla, el Proveedor confecciona Remito (Rto) por duplicado y envía original y una copia junto con los materiales al sector de Recepción.
 \item[Recepción] Tras recibir los materiales y el Remito original y una copia, el sector de Recepción controla cotejando cantidades en ambos contra la Orden de Compra. En caso de concordar, firma Remito original y copia, distribuye el original al sector Finanzas y devuelve la copia al Proveedor. Envía la mercadería al sector de Calidad para su control.
 \item [Proveedor] Recibido el remito firmado continua con su Circuito no relevado de Cobranzas.
 \item [Calidad] Recibida la mercadería de Recepción, controla la calidad contra lo especificado en la Orden de Compra. De aprobar, almacena la mercadería. De no aprobar, emite un Reclamo al Proveedor.
@@ -23,16 +23,49 @@
 
 \pagebreak
 \section{Formularios de Compras}
-\subsection{Formulario1}
-imagen
+\subsection{Orden de Compra}
+\begin{center}
+ \includegraphics[scale=0.85,keepaspectratio=true]{./Images/FormulariosIEP/Orden-de-Compra.png}
+ % Orden-de-Compra.png: 750x1002 pixel, 96dpi
+\end{center}
 \begin{itemize}
-  \item \textbf{Objetivo:}
-  \item \textbf{Alcance:}
-  \item \textbf{Emisor:}
-  \item \textbf{Cantidad de Copias Emitidas:}
-  \item \textbf{Sector receptor:}
+  \item \textbf{Objetivo:} Mediante este documento se comunica al proveedor la decisión de realizar una compra de materiales. Se especifican los productos a comprar con detalle de precios, cantidades, impuestos y condiciones de pago acordes a la previa cotización del proveedor.
+  \item \textbf{Alcance:} Es un documento entre la empresa y su proveedor.
+  \item \textbf{Emisor:} Compras
+  \item \textbf{Cantidad de Copias Emitidas:} Original y 4 copias
+  \item \textbf{Sector receptor:} Dirección General para su autorización y envío al proveedor
  \end{itemize}
-\subsubsection{Descripci\'on campos del Formulario1}
+\subsubsection{Descripci\'on campos de la Orden de Compra}
+\begin{enumerate}
+  \item Empresa emisora: Raz\'on Social de la empresa
+  \item Empresa emisora: Informaci\'on de Sucursal. Domicilio y N\'umero de Tel\'efono
+  \item Empresa emisora: Responsabilidad frente al IVA
+  \item Número de Orden de Compra
+  \item Fecha de emisi\'on
+  \item Empresa emisora: CUIT y C\'odigo de Ingresos Brutos
+  \item Proveedor: Raz\'on Social 
+  \item Proveedor: Domicilio
+  \item Proveedor: Responsabilidad frente al IVA
+  \item Condici\'on de pago
+  \item C\'odigo del proveedor al que se le compra
+  \item Proveedor: CUIT
+  \item Detalle de la Orden de Compra: C\'odigo del proveedor del \'item, Cantidad solicitada
+  \item Detalle de la Orden de Compra: Descripci\'on del \'item
+  \item Detalle de la Orden de Compra: Precio unitario del \'item
+  \item Detalle de la Orden de Compra: Importe total del \'item (cantidad * precio unitario)
+  \item Detalle de la Orden de Compra: Fecha de entrega del \'item
+  \item Detalle de la Orden de Compra: Subtotal de items (suma de los totales de \'item)
+  \item Resumen de la Orden de Compra: Subtotal de items (suma de los totales de \'item)
+  \item Resumen de la Orden de Compra: Importe de impuestos que aplican (opcional)
+  \item Resumen de la Orden de Compra: Subtotal después de impuestos (sólo si aplica impuestos)
+  \item Resumen de la Orden de Compra: Gravamen de IVA para Inscriptos
+  \item Resumen de la Orden de Compra: Gravamen de IVA para No Inscriptos
+  \item Resumen de la Orden de Compra: Total después de IVA
+  \item Importe Total de la Orden de Compra
+  \item Importe Total de la Orden de Compra en letras
+  \item Fecha de Vencimiento de la Orden de Compra
+  \item Términos de confirmación de aprobación o rechazo
+\end{enumerate}
 
 \subsection{Formulario2}
 imagen
