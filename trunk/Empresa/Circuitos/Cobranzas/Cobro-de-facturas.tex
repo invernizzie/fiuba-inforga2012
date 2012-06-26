@@ -3,7 +3,7 @@
 La empresa posee distintas formas de cobros, las cuales varian con el cliente. Algunas clientes pagan a traves de una cuenta corriente con una transferencia, otros con cheque o efectivo. A determinados clientes se les envía un cobrador mientras que muchos otros no.
 Por simplicidad, en este caso se describe el caso en el cual el cliente se acerca a la empresa al sector de finanzas a entregar los valores (cheques o efectivo).
 
-\includegraphics[scale=0.7]{Empresa/Circuitos/Cobranzas/cursograma-manual-cobranzas.jpg}
+\includegraphics[scale=0.8]{Empresa/Circuitos/Cobranzas/cursograma-para-manual-cobranzas-3.jpg}
 
 \pagebreak
 \section{Procedimiento de Cobranzas}
@@ -12,7 +12,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
   Por cada factura vencida que no este paga, emite un reclamo del pago por duplicado, con una fecha de vencimiento de pago. El primero lo firma y se lo envía al cliente. El otro lo archiva para que quede constancia del reclamo.
   \item \textbf{Cliente:} recibe el reclamo o carta de documento, y en caso de pagar, confecciona un cheque para realizar el mismo y lo envia al sector de finanzas.
   \item \textbf{Finanzas:} en caso de recibir el cheque, revisa que corresponda con la cantidad a pagar y que este correctamente confeccionado. Si este esta correcto, emite un recibo por duplicado, firma el original y se lo entrega al cliente. Finalmente, archiva el cheque, la factura por triplicado, el duplicado del reclamo y registra en el sistema el pago de la factura.
-  Si el cliente no paga, emite un reclamo a ventas y se lo envia a dicho sector. Si ya es la tercera vez que el cliente no paga, archiva los documentos utilizados y asienta en el sistema la falta de pago en la cuenta "pérdidas".
+  Si el cliente no paga, emite un reclamo a ventas y se lo envia a dicho sector. Si ya es la tercera vez que el cliente no paga, archiva los documentos utilizados y asienta en el sistema la falta de pago en la cuenta \textit{pérdidas}.
   \item \textbf{Ventas:} recibe el reclamo y si es la primera vez que se recibe un reclamo emite un segundo reclamo al cliente por duplicado. Firma el original y lo envia al cliente con una fecha límite para el pago. Si no es la primera vez que recibe un reclamo de finanzas, avisa de al sector legal de la falta de pago del cliente de manera informal(mail, llamado telefónico).
   \item \textbf{Legal:} una vez notificado de la falta de pago del cliente, emite una carta de documento, intimando al cliente a pagar las facturas que debe. La carta de documento es enviada al domicilio legal del cliente de forma tal que quede notificado.
 \end{enumerate}
@@ -116,8 +116,8 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
   \includegraphics{./Images/Simbolos/simbolo-Registro.png}
 \end{center}
 \begin{enumerate}
-\item Finanzas: registra en el sistema el cobro en la cuenta "cobros".
-\item Finanzas: registra en el sistema el la falta de pago en la cuenta "pérdidas".
+\item Finanzas: registra en el sistema el cobro en la cuenta \textit{cobros}.
+\item Finanzas: registra en el sistema el la falta de pago en la cuenta \textit{pérdidas}.
 \end{enumerate}
 
 \begin{center}
@@ -126,7 +126,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 \end{center}
 \begin{enumerate}
 \item Finanzas: archiva el cheque, el duplicado del recibo, el duplicado del primer Reclamo a Cliente y el triplicado de la factura.
-\item Finanzas: archiva el duplicado del primer Reclamo a Cliente, el duplicado del primer y segundo Reclamo a Ventas y el triplicado de la factura.
+\item Finanzas: archiva el duplicado del primer Reclamo a Cliente y el triplicado de la factura.
 \item Cliente: archiva el original del recibo.
 \item Ventas: almacena copia del segundo y/o tercer Reclamo a Cliente.
 \item Legal: almacena copia de Carta Documento.
@@ -134,27 +134,126 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \pagebreak
 \section{Formularios de Cobranzas}
-\subsection{Formulario1}
-imagen
-\begin{itemize}
-  \item \textbf{Objetivo:}
-  \item \textbf{Alcance:}
-  \item \textbf{Emisor:}
-  \item \textbf{Cantidad de Copias Emitidas:}
-  \item \textbf{Sector receptor:}
- \end{itemize}
-\subsubsection{Descripci\'on campos del Formulario1}
 
-\subsection{Formulario2}
-imagen
+\subsection{Listado de Cobranzas}
+\begin{center}
+  \includegraphics[scale=0.6]{./Images/FormulariosIEP/listado_cobranzas_IEP.png}
+\end{center}
+
 \begin{itemize}
-  \item \textbf{Objetivo:}
-  \item \textbf{Alcance:}
-  \item \textbf{Emisor:}
-  \item \textbf{Cantidad de Copias Emitidas:}
-  \item \textbf{Sector receptor:}
+  \item \textbf{Objetivo:} Documento que facilita el trabajo del Cobrador. Le indica los cobros que debe realizar, el lugar, el monto y las facturas a cobrar.
+  \item \textbf{Alcance:} Este documento lo confecciona finanzas para el cobrador.
+  \item \textbf{Emisor:} Finanzas
+  \item \textbf{Cantidad de Copias Emitidas:} 0
+  \item \textbf{Sector receptor:} Cobrador
  \end{itemize}
-\subsubsection{Descripci\'on campos del Formulario2}
+ 
+\subsubsection{Descripci\'on campos del Listado de Cobranzas}
+\begin{enumerate}
+\item Fecha de Emisión de Listado de Cobranzas
+\item Nombre de la persona encargada de cobrar
+\item Datos del cliente: Nombre , Domicilio, Teléfono
+\item Numero de la factura a cobrar y su respectivo vencimiento
+\item Importe neto de la factura a cobrar
+\item Descripción de los valores recibidos
+\item Numero de recibo emitido (valores recibidos)
+\item Observaciones
+\item Total de las facturas a cobrar
+\end{enumerate}
+
+
+\subsection{Recibo}
+\begin{center}
+  \includegraphics[scale=0.6]{./Images/FormulariosIEP/recibo.jpg}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{Objetivo:} Servir de comprobante para dejar constancia de la cobranza realizada.
+  \item \textbf{Alcance:} Este documento lo confecciona el cobrador al recibir un pago del cliente.
+  \item \textbf{Emisor:} Cobrador
+  \item \textbf{Cantidad de Copias Emitidas:} 3
+  \item \textbf{Sector receptor:} el cliente (original); tesorería el duplicado, cobranzas el triplicado, y el cuadruplicado queda retenido por el cobrador (luego pasa a cobranzas).
+ \end{itemize}
+ 
+\subsubsection{Descripci\'on campos Recibo}
+\begin{enumerate}
+\item Identificación del emisor (datos de la empresa: Razón social, dirección, Tipo responsable IVA inscripto)
+\item Nº recibo prenumerados y correlativos.
+\item Fecha de emisión, Nº Cuit, Nº ingresos brutos, caja previsional, inscripción.
+\item Aplicación de la cobranza (Tipo: Factura y/o documento, nota de crédito, nota de débito).
+\item Fecha Vencimiento
+\item Importe en pesos
+\item Total en pesos
+\item Razon social
+\item Importe en letras (expresado en pesos)
+\item Detalle de la cobranza (Tipo: giro-cheque, efectivo, documento).
+\item C/Banco
+\item Nº documento
+\item Importe en pesos
+\item Fecha Vencimiento
+\item Efectivo en pesos.
+\item Total en pesos.
+\item Importe total en pesos.
+\item Datos de la  imprenta (Imprenta, apellido y nombre o razón social, Nº Cuit,  fecha de impresión).
+\item En concepto de (cancelación / pago  parcial) de las (facturas / documentos) detalladas al margen.
+\item Sello y firma del proveedor.
+\end{enumerate}
+
 
 \pagebreak
 \section{Normas de Control Interno de Cobranzas}
+
+\begin{large}
+\textbf{Normas específicas de Cobranzas:}
+\end{large}
+
+\begin{itemize}
+
+\item \textbf{Control de los recibos:}
+Los recibos, provisorios o definitivos, deben estar encuadernados en talonarios, prenumerados,
+utilizarse en forma correlativa y quedar una copia adherida al talonario. Los recibos también están sujetos a
+las disposiciones de la DGI.
+También es importante el control de los talonarios recibidos de la imprenta y que se encuentren bajo
+custodia de un responsable, que podría ser el Tesorero. Toda entrega de nuevos talonarios a quienes los
+utilizan debe hacerse mediante constancia escrita con el objeto de deslindar responsabilidades.
+
+\item \textbf{Rendición diaria de la cobranza:}
+Cuando las cobranzas son realizadas mediante una gestión externa, se debe evitar que los valores
+recaudados sean utilizados para fines ajenos a los de la empresa y además, permitir la pronta
+disponibilidad de los fondos. Los cobradores deben rendir diariamente sus cobranzas o, en su defecto,
+depositar directamente en la cuenta bancaria de la empresa el producto de las mismas.
+
+\item \textbf{Apertura de la correspondencia:}
+Debe ser abierta por un funcionario responsable o su secretaria. En el caso de que se utilice esta
+modalidad de cobranza, quien concentra la responsabilidad de recepción y distribución de la
+correspondencia confeccionará una planilla con el detalle de los valores recibidos, y la emisión del recibo
+quedará a cargo de Tesorería. Tesorería recibe los valores acompañados de una planilla de cobranza,
+como en el caso de la cobranza efectuada por un cobrador.
+
+\item \textbf{Control sobre los valores recibidos:}
+Se debe controlar adecuadamente que los valores recibidos cumplan las condiciones establecidas
+para ser recibidos, en lo referente a su confección, firmas autorizantes fechas, que sean originales no
+falsificados, etc. en todas las condiciones establecidas al respecto.
+Para evitar que alguien pueda apoderarse de un cheque, es importante que, al momento de su
+recepción, se le coloque al dorso una leyenda que restrinja su utilización, tal como únicamente para
+depositar en la cuenta de (nombre de la empresa). ( en caso de que no se descuenten o endosen a
+terceros)
+Las transferencias de dinero o valores deben respaldarse mediante un comprobante que permita
+deslindar responsabilidades con respecto a su custodia y además, debe realizarse entre la menor cantidad
+de sectores posibles para facilitar el seguimiento.
+Para tener un mejor control de las cobranzas y de los fondos ingresados, resulta imprescindible
+depositar diariamente en forma integral los valores recibidos, evitando endosos a terceros.
+
+\item \textbf{Concesión de descuentos por pronto pago:}
+Con el objeto de evitar posibles fraudes que pudieran cometerse mediante el ingreso a la empresa
+de importes inferiores a los realmente cobrados, justificando la diferencia con un descuento concedido, la
+concesión de este tipo de descuento debe estar autorizada por un funcionario que pueda hacer uso de esta
+atribución.
+En caso de que la cobranza sea realizada fuera de la empresa, se puede autorizar al cobrador a
+aplicar y calcular los descuentos correspondientes, siempre que ello este debidamente documentado (podrá
+estar estipulado en la factura o bien establecido en una norma de cobranzas) y se controle adecuadamente.
+Se deben contratar seguros adecuados para resguardar los bienes, tanto fuera de la empresa como dentro
+de la misma.
+
+\end{itemize}
+
