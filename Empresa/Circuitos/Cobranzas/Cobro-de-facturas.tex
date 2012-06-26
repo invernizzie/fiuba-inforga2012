@@ -30,7 +30,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{center}
   \textbf{Documentos}
-  \includegraphics{../../../Images/Simbolos/simbolo-Documentos.png}
+  \includegraphics{./Images/Simbolos/simbolo-Documentos.png}
 \end{center}
 \begin{enumerate}
 \item Reclamo a Cliente
@@ -42,7 +42,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{center}
   \textbf{Emisión de Documentos}
-  \includegraphics{../../../Images/Simbolos/simbolo-Emision-de-Documentos.png}
+  \includegraphics{./Images/Simbolos/simbolo-Emision-de-Documentos.png}
 \end{center}
 \begin{enumerate}
 \item Finanzas: Emite primer Reclamo a Cliente por original y copia.
@@ -55,7 +55,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{center}
   \textbf{Firma}
-  \includegraphics{../../../Images/Simbolos/simbolo-Firma.png}
+  \includegraphics{./Images/Simbolos/simbolo-Firma.png}
 \end{center}
 \begin{enumerate}
 \item Finanzas: Firma el original del primer Reclamo a Cliente.
@@ -68,7 +68,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{center}
   \textbf{Distribución}
-  \includegraphics{../../../Images/Simbolos/simbolo-Distribucion.png}
+  \includegraphics{./Images/Simbolos/simbolo-Distribucion.png}
 \end{center}
 \begin{enumerate}
 \item Finanzas: distribuye el original del primer Reclamo a Cliente al cliente y conserva el duplicado.
@@ -81,17 +81,15 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{center}
   \textbf{Almacenamiento Transitorio}
-  \includegraphics{../../../Images/Simbolos/simbolo-Almacenamiento-Transitorio.png}
+  \includegraphics{./Images/Simbolos/simbolo-Almacenamiento-Transitorio.png}
 \end{center}
 \begin{enumerate}
 \item Finanzas: almacena copia del primer Reclamo a Cliente.
-\item Ventas: almacena copia del segundo y/o tercer Reclamo a Cliente.
-\item Legal: almacena copia de Carta Documento.
 \end{enumerate}
 
 \begin{center}
   \textbf{Control y verificación}
-  \includegraphics{../../../Images/Simbolos/simbolo-Control-y-Verificacion.png}
+  \includegraphics{./Images/Simbolos/simbolo-Control-y-Verificacion.png}
 \end{center}
 \begin{enumerate}
 \item Finanzas: Ejecuta un reporte en el sistema donde saca las facturas ya vencidas que no estan pagas. Controla el resultado del mismo con las factura por triplicado que tiene archivadas.
@@ -103,7 +101,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{center}
   \textbf{Decisión}
-  \includegraphics{../../../Images/Simbolos/simbolo-Decision.png}
+  \includegraphics{./Images/Simbolos/simbolo-Decision.png}
 \end{center}
 \begin{enumerate}
 \item Finanzas: Una vez que el resultado del reporte de facturas vencidas y que estas esten correctas emite los correspondientes reclamos para el cliente. Si no, no hace nada ( no hay facturas a cobrar).
@@ -115,7 +113,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{center}
   \textbf{Registro}
-  \includegraphics{../../../Images/Simbolos/simbolo-Registro.png}
+  \includegraphics{./Images/Simbolos/simbolo-Registro.png}
 \end{center}
 \begin{enumerate}
 \item Finanzas: registra en el sistema el cobro en la cuenta "cobros".
@@ -124,12 +122,14 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{center}
   \textbf{Almacenamiento definitivo}
-  \includegraphics{../../../Images/Simbolos/simbolo-Almacenamiento-Definitivo.png}
+  \includegraphics{./Images/Simbolos/simbolo-Almacenamiento-Definitivo.png}
 \end{center}
 \begin{enumerate}
 \item Finanzas: archiva el cheque, el duplicado del recibo, el duplicado del primer Reclamo a Cliente y el triplicado de la factura.
 \item Finanzas: archiva el duplicado del primer Reclamo a Cliente, el duplicado del primer y segundo Reclamo a Ventas y el triplicado de la factura.
 \item Cliente: archiva el original del recibo.
+\item Ventas: almacena copia del segundo y/o tercer Reclamo a Cliente.
+\item Legal: almacena copia de Carta Documento.
 \end{enumerate}
 
 \pagebreak
