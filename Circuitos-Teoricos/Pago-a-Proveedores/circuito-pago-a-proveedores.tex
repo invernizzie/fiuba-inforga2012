@@ -12,6 +12,12 @@
 \end{center}
 
 \section{Cursograma de Pagos (con numeración para el manual)}
+\begin{center}
+ \includegraphics[scale=0.75,keepaspectratio=true]{./Circuitos-Teoricos/Pago-a-Proveedores/Images/cursograma-pago-a-proveedores-manual.png}
+ % cursograma-pago-a-proveedores.png: 587x630 pixel, 96dpi, 15.53x16.67 cm, bb=0 0 440 472
+\end{center}
+
+\pagebreak
 \subsection{Manual del Cursograma de Pagos}
 
 \begin{center}\textbf{Sectores intervinientes}\end{center}
@@ -38,10 +44,10 @@
   \includegraphics{./Images/Simbolos/simbolo-Emision-de-Documentos.png}
 \end{center}
 \begin{enumerate}
-  \item Proveedor: emite factura, original y dos copias.
-  \item Proveedor: emite recibo del pago, original y copia.
-  \item Cuentas a pagar: con la factura recibida confecciona la Orden de Pago, original y dos copias.
-  \item Tesorería: emite cheque de pago a proveedor.
+  \item Proveedor: emite F, original y dos copias.
+  \item Proveedor: emite REC, original y copia.
+  \item Cuentas a pagar: con la F recibida confecciona la OP, original y dos copias.
+  \item Tesorería: emite Cheque de pago a proveedor.
 \end{enumerate}
 
 \begin{center}
@@ -49,10 +55,10 @@
   \includegraphics{./Images/Simbolos/simbolo-Firma.png}
 \end{center}
 \begin{enumerate}
-  \item Proveedor: firma recibo.
-  \item Cuentas a Pagar: firma las órdenes de pago.
-  \item Tesorería: realiza la primera firma del cheque.
-  \item Gcia. administrativa: realiza la segunda firma del cheque.
+  \item Proveedor: firma REC.
+  \item Cuentas a Pagar: firma las OP.
+  \item Tesorería: realiza la primera firma del Cheque.
+  \item Gcia. administrativa: realiza la segunda firma del Cheque.
 \end{enumerate}
 
 \begin{center}
@@ -60,12 +66,12 @@
   \includegraphics{./Images/Simbolos/simbolo-Distribucion.png}
 \end{center}
 \begin{enumerate}
-  \item Proveedor: distribuye factura original a cuentas a pagar, y conserva la copia.
-  \item Proveedor: distribuye recibo original a Tesorería, conserva la copia.
-  \item Cuentas a Pagar: distribuye las órdenes de pago. Original y primera copia a Tesorería, conserva la \'ultima copia.
-  \item Tesorería: distribuye cheque, orden de pago original y legajo de pago a Gcia. Administrativa.
-  \item Tesorería: distribuye cheque a proveedor, previamente lo registra.
-  \item Tesorería: distribuye Recibo y Legajo a Contaduría.
+  \item Proveedor: distribuye F original a cuentas a pagar, y conserva la copia.
+  \item Proveedor: distribuye REC original a Tesorería, conserva la copia.
+  \item Cuentas a Pagar: distribuye las OP. Original y primera copia a Tesorería, conserva la \'ultima copia.
+  \item Tesorería: distribuye el Cheque, OP original y legajo de pago a Gcia. Administrativa.
+  \item Tesorería: distribuye el Cheque a proveedor, previamente lo registra.
+  \item Tesorería: distribuye el REC y Legajo a Contaduría.
 \end{enumerate}
 
 \begin{center}
@@ -73,6 +79,8 @@
   \includegraphics{./Images/Simbolos/simbolo-Almacenamiento-Transitorio.png}
 \end{center}
 \begin{enumerate}
+  \item Proveedores: almacena la OC original y RTO primera copia conformado.
+  \item Proveedores: almacena la F primera copia.
   \item Cuentas a Pagar: almacena OC segunda copia, RTO original y PR tercera copia firmada.
   \item Cuentas a Pagar: almacena OP segunda copia.
   \item Cuentas a Pagar: almacena libros contables.
@@ -84,9 +92,9 @@
   \includegraphics{./Images/Simbolos/simbolo-Control-y-Verificacion.png}
 \end{center}
 \begin{enumerate}
-  \item Proveedor: controla el cheque con la factura que envió, para verificar el cumplimiento del pago de la misma, verificando el monto y el plazo de pago.
-  \item Cuentas a Pagar: realiza control de factura, remito, parte de recepción y la orden de compra, verificando que la factura haya sido correctamente confeccionada, y que tanto ésta última como el remito y el parte de recepción referencien a la orden de compra en cuestión. 
-  \item Gcia. administrativa: controla el legajo con el cheque y el original de la orden de pago, verificando que el cheque haya sido correctamente confeccionado, para el proveedor en cuestión y con el monto correcto.
+  \item Proveedor: controla el Cheque con la F que envió, para verificar el cumplimiento del pago de la misma, verificando el monto y el plazo de pago.
+  \item Cuentas a Pagar: realiza control de F, REC, parte de recepción y la orden de compra, verificando que la factura haya sido correctamente confeccionada, y que tanto ésta última como el remito y el parte de recepción referencien a la orden de compra en cuestión. 
+  \item Gcia. administrativa: controla el legajo con el cheque y el original de la OP, verificando que el cheque haya sido correctamente confeccionado, para el proveedor en cuestión y con el monto correcto.
 \end{enumerate}
 
 \begin{center}
@@ -94,9 +102,9 @@
   \includegraphics{./Images/Simbolos/simbolo-Decision.png}
 \end{center}
 \begin{enumerate}
-  \item Proveedor: si el cheque pasa el control y verificaci\'on, entonces se emite el recibo; caso contrario devuelve el cheque a Tesorería.
-  \item Cuentas a Pagar: si la factura pasa el control y verificaci\'on, entonces arma el legajo de pago; caso contrario rechaza la factura y la devuelve al proveedor.
-  \item Gcia. administrativa: si legajo pasa el control y verificaci\'on, entonces coloca PAGADO y firma el cheque; caso contrario devuelve la documentación a Tesorería.
+  \item Proveedor: si el Cheque pasa el control y verificaci\'on, entonces se emite el REC; caso contrario devuelve el Cheque a Tesorería.
+  \item Cuentas a Pagar: si la F pasa el control y verificaci\'on, entonces arma el legajo de pago; caso contrario rechaza la F y la devuelve al proveedor.
+  \item Gcia. administrativa: si legajo pasa el control y verificaci\'on, entonces coloca PAGADO y realiza la segunda firma del Cheque; caso contrario devuelve la documentación a Tesorería.
 \end{enumerate}
 
 \begin{center}
@@ -105,7 +113,7 @@
 \end{center}
 \begin{enumerate}
   \item Cuentas a Pagar: arma legajo de pago.
-  \item Tesorería: entrega cheque.
+  \item Tesorería: entrega Cheque.
   \item Tesorería: agrega el recibo al legajo de pago.
   \item Gcia. administrativa: coloca “Pagado” inutilizando toda la documentación, para evitar nueva presentación.
 \end{enumerate}
@@ -116,7 +124,7 @@
 \end{center}
 \begin{enumerate}
   \item Cuentas a Pagar: registra la compra en la cta. cte. proveedores.
-  \item Cuentas a Pagar: registra contablemente el pago en los libros contables. 
+  \item Contadur\'ia: registra contablemente el pago en los libros contables. 
 \end{enumerate}
 
 \begin{center}
@@ -154,9 +162,9 @@
 Mediante este documento se notifica a los sectores que lo reciben de la existencia y autorización
 del pago.
   \item \textbf{Alcance:} Es un documento interno a la empresa.
-  \item \textbf{Emisor:} Contaduría.
-  \item \textbf{Cantidad de Copias Emitidas:} Original y 2 copias.
-  \item \textbf{Sector receptor:} Tesorería.
+  \item \textbf{Emisor:} Cuentas a pagar.
+  \item \textbf{Cantidad de Copias Emitidas:} Original y dos copias.
+  \item \textbf{Sector receptor:} Original y primera copia a Tesorería; segunda copia a Cuentas a pagar.
 \end{itemize}
 
 \subsubsection{Descripción campos Orden de Pago}
@@ -198,9 +206,9 @@ del pago.
  \item Persona o entidad a la que debe pagarse el cheque.
  \item Dinero a ser entregado por el cheque en letras.
  \item Dinero a ser entregado por el cheque en n\'umeros.
- \item Domicilio de pago Sucursal del Banco.
+ \item Domicilio en donde se encuentra la cuenta bancaria.
  \item Serie, tipo y número de documento reservado para la lectura mecánica del cheque.
- \item CUIT y n\'umero de la cuenta bancaria.
+ \item Nombre titular y CUIT del titular de la cuenta y n\'umero de la cuenta bancaria.
  \item Domicilio de la Sucursal de la cuenta bancaria.
  \item Firma del que entrega el cheque.
 \end{enumerate}
