@@ -9,13 +9,13 @@
 \section{Procedimiento de Ventas}
  \begin{description}
 	\item[1 - Cliente] El cliente solicita un pedido emitiendo una 'Orden de Compra' (OC) mediante un 'Circuito No Relevado de Compras' (CNR Compras).
-	\item[2 - Ventas] El \'area de ventas recibe la OC de parte del cliente y de esta manera genera la 'Solicitud de Pedido de Ventas' (SPV) especificando los detalles de la venta tal como est\'an especificados en la OC como por ejemplo, productos y plazo de entrega tentativo. Firma la SPV y env\'ia el original a Producci\'on y las copias a Almac\'en 1 y Contadur\'ia. Registra en el sistema la generaci\'on de la SPV y archiva en forma definitiva la 'Orden de Compra' junto a una copia de la SPV.
+	\item[2 - Ventas] El \'area de ventas recibe la OC de parte del cliente, la controla y de esta manera genera la 'Solicitud de Pedido de Ventas' (SPV) especificando los detalles de la venta tal como est\'an especificados en la OC como por ejemplo, productos y plazo de entrega tentativo. Firma la SPV y env\'ia el original a Producci\'on y las copias a Almac\'en 1 y Contadur\'ia. Registra en el sistema la generaci\'on de la SPV y archiva en forma definitiva la 'Orden de Compra' junto a una copia de la SPV.
 	\item[3 - Producci\'on] Producci\'on recibe la SPV y verifica que cuenta con stock suficiente. De no poseer stock necesario se procede a realizar el 'Circuito no relevado de de Producci\'on' (CNR Producci\'on). En caso de contar con el producto solicitado, genera una 'Orden de Pedido de Productos' (OPP) y la env\'ia a Almac\'en 2 (Almac\'en de roductos terminados).  Registra en el sistema la OPP y archiva en forma definitiva la SPV original y la copia de la OPP. 
 	\item[4 - Almac\'en 2] Almac\'en 2 recibe la OPP, ya cuenta con el producto (ya sea porque ten\'ia stock o porque se ha producido especialmente) y env\'ia el producto junto con la documentaci\'on a Almac\'en 1. Registra en el sistema la actualización de la ficha de stock (FS) y el envío de productos al Almac\'en 1. Archiva definitivamente la OPP.
 	\item[5 - Almac\'en 1] Almac\'en 1 prepara los productos para su entrega y genera el 'Remito' (RTO) correspondiente y tres copias. Entrega el producto al Transportista con el RTO original y entrega dos copias a Contadur\'ia. Registra en el sistema la generación de documentos y el env\'io de la mercader\'ia, y archiva en forma definitiva la 'Orden de Pedido de Productos' y una copia del Remito.
 	\item[6 - Contadur\'ia] Contadur\'ia por un lado recibe la SPV asociada a la venta, y la archiva temporalmente. Al recibir el remito de Almac\'en 1 genera un listado de Remitos sin facturar asociados a la venta mediante el sistema, y emite la 'Factura'(F) correspondiente con dos copias. Registra en el sistema la emisi\'on de la factura y env\'ia el original y copia de la factura al Transportista para su env\'io al cliente. Contadur\'ia actualiza la Ficha de Cliente (FC) mediante el sistema y archiva definitivamente una copia de la factura y la SPV recibida.
 	\item[7 - Transportista] Transportista recibe los remitos, las facturas y la carga a ser enviada. Env\'ia el pedido junto con la documentaci\'on al cliente. 
-	\item[8 - Cliente] El cliente recibe los remitos, las facturas y el pedido. Chequea la mercader\'ia recibida junto con los documentos original, y firma las copias de los mismos. Distribuye las copias firmadas de vuelta a la empresa, y procede a realizar el 'Circuito No Relevado de Pagos' (CNR Pagos). Si la mercader\'ia no est\'a conforme a los pactado mediante la OC, se procede al CNR COmpras
+	\item[8 - Cliente] El cliente recibe los remitos, las facturas y el pedido. Chequea la mercader\'ia recibida junto con los documentos original, y firma las copias de los mismos. Distribuye las copias firmadas de vuelta a la empresa, y procede a realizar el 'Circuito No Relevado de Pagos' (CNR Pagos). Si la mercader\'ia no est\'a conforme a los pactado mediante la OC, se procede al CNR Compras. Conserva el Remito y Factura original.
 	\item[9 - Almac\'en 1] Almacen 1 recibe la copia del remito firmado por el cliente, la registra en el sistema y lo archiva definitivamente. 
 	\item[10 - Contadur\'ia] Contadur\'ia recibe la copia de la factura y el remito firmados por el cliente y la asienta la recepci\'on en el sistema. El pago de la factura es parte del 'Circuito no relevado de Cobranzas' (CNR Cobranzas)
 \end{description}
@@ -85,7 +85,6 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
 \begin{enumerate}
   \item Ventas firma la Solicitud de Pedido de Ventas.
   \item Producci\'on firma la Orden de Pedido de Productos.
-  \item Almac\'en 2 firma la Orden de Pedido de Productos.
   \item Cliente firma las copias de remito y factura.
 \end{enumerate}
 
@@ -94,6 +93,7 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
   \includegraphics{./Images/Simbolos/simbolo-Distribucion.png}
 \end{center}
 \begin{enumerate}
+  \item Cliente distribuye la OC al sector de ventas.
   \item Ventas distribuye Solicitud de Pedido de Ventas a Producci\'on, Almac\'en 1 y Contadur\'ia.
   \item Producci\'on distribuye Orden de Pedido de Productos a Almac\'en 2.
   \item Almacen 2 distribuye los productos pedidos al Almac\'en 1.
@@ -111,7 +111,7 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
   \item Cliente almacena Orden de Compra.
   \item Almac\'en 1 almacena una copia de la SPV.
   \item Contadur\'ia almacena una ficha de cliente y la SPV.
-  \item Transportista almacena los remitos, las facturas y el pedido.
+  \item Transportista almacena el remito.
 \end{enumerate}
 
 \begin{center}
@@ -119,6 +119,7 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
   \includegraphics{./Images/Simbolos/simbolo-Control-y-Verificacion.png}
 \end{center}
 \begin{enumerate}
+	\item Ventas controla la OC recibida
 	\item Producci\'on controla si cuenta con stock suficiente con la Solicitud de Pedido de Ventas.
 	\item El cliente controla si el pedido recibido es realmente lo que pidi\'o con la Orden de Compra.
 \end{enumerate}
@@ -129,8 +130,9 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
   \includegraphics{./Images/Simbolos/simbolo-Decision.png}
 \end{center}
 \begin{enumerate}
-  \item Producci\'on controla el stock. De no poseer procede a realizar el 'Circuito no relevado de de Producci\'on' (CNR Producci\'on). En caso de contar con el producto solicitado, genera una 'Orden de Pedido de Productos'.
   \item Cliente controla el pedido recibido. En caso de existir alg\'un inconveniente ejecuta parto de un 'Circuito no relevado de Compras', sino procede a la firma y distribuci\'on de los documentos firmados.
+  \item Producci\'on controla el stock. De no poseer procede a realizar el 'Circuito no relevado de de Producci\'on' (CNR Producci\'on). En caso de contar con el producto solicitado, genera una 'Orden de Pedido de Productos'.
+
 \end{enumerate}
 
 \begin{center}
@@ -168,6 +170,14 @@ Luego de analizar los diagramas de procedimiento de alto nivel del proceso de ve
   \item Compras (circuito del cliente).
   \item Pagos (circuito del cliente).
   \item Cobranzas.
+\end{enumerate}
+
+\begin{center}
+  \textbf{Documentos}
+  \includegraphics{./Images/Simbolos/simbolo-Operacion.png}
+\end{center}
+\begin{enumerate}
+  \item Contaduría genera un listado remitos sin facturar asociados a la venta mediante el sistema, en base al cual arma la factura.
 \end{enumerate}
 
 \pagebreak
