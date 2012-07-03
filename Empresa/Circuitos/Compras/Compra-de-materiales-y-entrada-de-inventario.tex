@@ -8,7 +8,7 @@
 \begin{description}
 \item[1 - Producción] Tras detectar necesidad de materiales el sector de Producción emite un Pedido de Materiales (PM) en original y copia, el nivel autorizante firma el original y lo envía al sector de Almacenes, archiva la copia.
 \item[2 - Almacenes] Tras recibir Pedido de Materiales del sector de Producción, Almacenes chequea las existencias y si tiene materiales suficientes los despacha; si no tiene los materiales necesarios, o se alcanza el punto de pedido, Almacenes emite un Requerimiento de Compra (RC) en original y copia, lo firma y envía al sector de Compras el original archivando la copia.
-\item[3 - Compras] Recibido el Requerimiento de Compra, el área de Compras consulta listas de precios del Registro de Proveedores, confeccionadas con Pedidos de Cotización realizados mensualmente, y en función de ellos emite una Orden de Compra (OC) original y tres copias, las firma y distribuye original a Dirección General, una copia a Recepción, una a Finanzas, una a Calidad y almacena la última copia.
+\item[3 - Compras] Recibido el Requerimiento de Compra, el área de Compras consulta listas de precios del Registro de Proveedores, confeccionadas con Pedidos de Cotización realizados mensualmente, y en función de ellos emite una Orden de Compra (OC) original y tres copias, las firma y distribuye original a Dirección General, una copia a Recepción, una a Finanzas, y almacena la última copia.
 \item [4 - Dirección General] Tras recibir la Orden de Compra del sector de Compras, la Dirección General controla los precios contra Ordenes de Compra archivadas de compras anteriores, y en caso de aprobarla la firma y envía al sector de Ventas del Proveedor previamente seleccionado. En caso de rechazarla devuelve la Orden de Compra al sector de Compras para su revisión.
 \item [5 - Proveedor] Una vez recibida la Orden de Compra firmada por Compras y Dirección General, el Proveedor, según su circuito de ventas, el Proveedor confecciona Remito (Rto) por duplicado y envía original y una copia junto con los materiales al sector de Recepción.
 \item[6 - Recepción] Tras recibir los materiales y el Remito original y una copia, el sector de Recepción controla cotejando cantidades en ambos contra la Orden de Compra. En caso de concordar, firma Remito original y copia, almacena temporalmente el original y devuelve la copia al Proveedor. Emite Parte de Recepción (PR) en original y dos copias, envía la mercadería al sector de Calidad para su control junto con ambas copias del documento.
@@ -17,7 +17,7 @@
 \item [9 - Recepción] Recibido el Parte de Recepción firmado por Calidad el sector Recepción lo controla. De no estar aprobado emite Nota de Rechazo en original y duplicado, firma y distribuye al Proveedor junto con la mercadería para que vuelva a hacer el envío; archiva la copia de la Nota de Rechazo, el Remito original, su copia de la Orden de Compra y las tres copias del Parte de Recepción. De estar aprobado envía la mercadería junto con el Parte de Recepción original a Almacenes, y el Remito original a Finanzas.
 \item [10 - Almacenes] Recibido el Parte de Recepción firmado por Recepción junto con la mercadería, Almacenes registra la entrada de material en la ficha de stock y devuelve el Parte de Recepción firmado a Recepción.
 \item [11 - Recepción] Tras recibir el Parte de Recepción firmado por Almacenes, lo archiva permanentemente junto con la demás copia del Parte de Recepción, y su copia de la Orden de Compra.
-\item [12 - Almacenes] Una vez registrada la entrada de materiales, o tras haber detectado existencias suficientes, Almacenes registra la salida de material en la ficha de stock y los despacha al sector de Producción.
+\item [12 - Almacenes] Una vez registrada la entrada de materiales, o tras haber detectado existencias suficientes, Almacenes envía los materiales al sector de Producción y registra su salida en la ficha de stock.
 \end{description}
 
 \pagebreak
@@ -86,18 +86,18 @@
   \includegraphics{./Images/Simbolos/simbolo-Distribucion.png}
 \end{center}
 \begin{enumerate}
-  \item Producción distribuye el Pedido de Materiales a Almacenes.
-  \item Almacenes distribuye el Requerimiento de Compra a Compras.
-  \item Compras distribuye las Ordenes de Compra a Dirección General, Recepción y Finanzas.
-  \item Dirección General distribuye la Orden de Compra al Proveedor.
-  \item El Proveedor distribuye el Remito a Recepción.
-  \item Recepción distribuye el Remito al Proveedor.
+  \item Producción distribuye el Pedido de Materiales original a Almacenes, se queda con la copia 1.
+  \item Almacenes distribuye el Requerimiento de Compra original a Compras, se queda con la copia 1.
+  \item Compras distribuye el original de la Orden de Compra a Dirección General, la copia 1 a Recepción, la copia 2 a Finanzas y se queda con la copia 3.
+  \item Dirección General distribuye la Orden de Compra original al Proveedor.
+  \item El Proveedor distribuye el Remito en original y copia a Recepción.
+  \item Recepción distribuye la copia del Remito firmado al Proveedor.
   \item Calidad distribuye la copia 1 del Parte de Recepción a Recepción.
   \item Calidad distribuye la copia 2 del Parte de Recepción a Recepción.
-  \item Recepción distribuye el Parte de Recepción a Calidad.
-  \item Recepción distribuye la Nota de Reclamo al Proveedor.
-  \item Recepción distribuye el Remito a Finanzas y el Parte de Recepción a Almacenes.
-  \item Almacenes distribuye el Parte de Recepción firmado a Recepción.
+  \item Recepción distribuye las copias 1 y 2 del Parte de Recepción a Calidad.
+  \item Recepción distribuye la Nota de Reclamo original al Proveedor, se queda con la copia.
+  \item Recepción distribuye el Remito original a Finanzas y el Parte de Recepción original a Almacenes.
+  \item Almacenes distribuye el Parte de Recepción original firmado a Recepción.
 \end{enumerate}
 
 \begin{center}
@@ -156,11 +156,11 @@
   \includegraphics{./Images/Simbolos/simbolo-Almacenamiento-Definitivo.png}
 \end{center}
 \begin{enumerate}
-  \item Producción almacena Pedido de Materiales.
-  \item Compras almacena el triplicado de la Orden de Compra.
-  \item Recepción almacena el duplicado de la Nota de Reclamo, el original del Remito, el duplicado de la Orden de Compra, y todas las copias del Parte de Recepción
-  \item Recepción almacena el original del Parte de Recepción firmado, su duplicado firmado, el triplicado y el original de la Orden de Compra
-  \item Almacenes almacena el duplicado del Requerimiento de Compra y el original del Pedido de Materiales
+  \item Producción almacena la copia 1 del Pedido de Materiales.
+  \item Compras almacena la copia 3 de la Orden de Compra.
+  \item Recepción almacena la copia 1 de la Nota de Reclamo, el original del Remito, la copia 1 de la Orden de Compra, el original y las dos copias del Parte de Recepción.
+  \item Recepción almacena el original del Parte de Recepción firmado, su copia 1 firmada, su copia 2 y la copia 1 de la Orden de Compra.
+  \item Almacenes almacena la copia 1 del Requerimiento de Compra y el original del Pedido de Materiales.
 \end{enumerate}
 
 \begin{center}
@@ -175,6 +175,14 @@
   \item Pagos
 \end{enumerate}
 
+\begin{center}
+  \textbf{Operación}
+  \includegraphics{./Images/Simbolos/simbolo-Operacion.png}
+\end{center}
+\begin{enumerate}
+  \item El sector de Calidad controla la calidad contra lo especificado en el Parte de Recepción.
+\end{enumerate}
+
 \pagebreak
 \section{Formularios de Compras}
 \subsection{Orden de Compra}
@@ -187,7 +195,7 @@
   \item \textbf{Alcance:} Es un documento externo, entre la empresa y su proveedor.
   \item \textbf{Emisor:} Compras.
   \item \textbf{Cantidad de Copias Emitidas:} Original y cuatro copias.
-  \item \textbf{Sector receptor:} Original a Dirección General para su autorización; primera copia a Recepci\'on; segunda copia a Finanzas; tercera copia a Control de Calidad; y la \'ultima copia a Compras.
+  \item \textbf{Sector receptor:} Original a Dirección General para su autorización; primera copia a Recepci\'on; segunda copia a Finanzas; y la \'ultima copia a Compras.
  \end{itemize}
 \subsubsection{Descripci\'on campos de la Orden de Compra}
 \begin{enumerate}
@@ -268,13 +276,12 @@ pedidos y las cotizaciones se realizan por escrito. En compras usuales a proveed
 
  \item	{\bf Punto de pedido: } La cantidad en existencia a partir de la cual se debe solicitar la compra de un articulo, se establece como un stock mínimo, teniendo en cuenta el programa de producción vigente.
 
- \item	{\bf Control de la mercadería recibida: } De la cantidad y la calidad. La función de Calidad requiere de conocimientos técnicos, por lo cual está separada de Recepción, que en el
-momento de la recepción solo da conformidad por la cantidad.
+ \item	{\bf Control de la mercadería recibida: } De la cantidad y la calidad. La función de Calidad requiere de conocimientos técnicos, por lo cual está separada de Recepción, que en el momento de la recepción solo da conformidad por la cantidad.
 
  \item	{\bf Constitución de seguros sobre mercaderías en tránsito }
  
  \item	{\bf Prenumeración de formularios: } En forma preimpresa y correlativa para Requerimiento de Compra y Orden de
 Compra. Controles de correlatividad de
 los formularios utilizados.
-
 \end{itemize}
+Existen normas de control interno deseables que la empresa no cumple. En el caso de la obtención de cotizaciones, no se realizan para las compras usuales, lo que podría traer problemas de incumplimiento de espcificaciones técnicas que se esperan del producto por haber cambiado, o políticas de precio de proveedores inconvenientes para la operatoria de la empresa; también podría incurrir en acuerdos ilegítimos entre personal de compras y personal de ventas del proveedor favorecido por la compra habitual. Tampoco se definen políticas de lote de compra que podrían prever situaciones de desabastecimiento o reducir costos de logística.
