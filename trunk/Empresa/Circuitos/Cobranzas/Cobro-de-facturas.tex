@@ -3,7 +3,7 @@
 La empresa posee distintas formas de cobros, las cuales varian con el cliente. Algunas clientes pagan a trav\'es de una cuenta corriente con una transferencia, otros con cheque o efectivo. A determinados clientes se les envía un cobrador mientras que muchos otros no.
 Por simplicidad, en este caso se describe el caso en el cual el cliente se acerca a la empresa al sector de finanzas a entregar los valores (cheques o efectivo).
 \begin{center}
-  \includegraphics{Empresa/Circuitos/Cobranzas/cursograma-para-procedimiento-cobranzas.jpg} 
+  \includegraphics{Empresa/Circuitos/Cobranzas/Cursograma-para-manual-cobranzas-con-correcciones.jpg} 
 \end{center}
 
 \pagebreak
@@ -22,7 +22,7 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 \pagebreak
 \section{Cursograma de Cobranzas (con numeración para el manual)}
 \begin{center}
- \includegraphics{Empresa/Circuitos/Cobranzas/cursograma-para-manual-cobranzas.jpg}
+ \includegraphics{Empresa/Circuitos/Cobranzas/Cursograma-para-manua-cobranzas-para-manual-correccion.jpg}
  % cursograma-para-manual-cobranzas.jpg: 523x583 pixel, 96dpi, 13.84x15.43 cm, bb=0 0 392 437
 \end{center}
 
@@ -113,10 +113,10 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
   \includegraphics{./Images/Simbolos/simbolo-Decision.png}
 \end{center}
 \begin{enumerate}
-\item Finanzas: Una vez que el resultado del reporte de facturas vencidas y que estas esten correctas emite los correspondientes reclamos para el cliente. Si no, no hace nada ( no hay facturas a cobrar).
+\item Finanzas: Una vez que el resultado del reporte de facturas vencidas y que estas esten correctas emite los correspondientes reclamos para el cliente. Si no, al no haber facturas para cobrar, cierra el sistema con el cual abrio el reporte.
 \item Finanzas: Si el cheque recibido esta bien hecho y se corresponde con el monto de la factura vencida, procede a emitir el recibo correspondiente. Si el cliente no paga, venciendose el plazo de la factura o reclamo, procede a verificar si ya se han emitido otros reclamos o no.
 \item Finanzas: Si ya era el tercer reclamo que se le envio al cliente, procede a asentar la falta de pago en el sistema. Si no, emite el primer o segundo reclamo correspondiente a Ventas.
-\item Cliente: Una vez verificada la factura que se le reclama decide en caso de estar correcta la misma, confeccionar el cheque para realizar el pago. En caso contrario no hace nada (o depende de cada cliente, en realidad no interesa que hace si no paga).
+\item Cliente: Una vez verificada la factura que se le reclama decide en caso de estar correcta la misma, confeccionar el cheque para realizar el pago. En caso contrario, el cliente puede decidir no pagar dicha factura.
 \item Ventas: Una vez verificado el reclamo proveniente de Finanzas, y que este este correcto emite un Reclamo a Cliente. Si este no era el primer reclamo que venia del sector de Ventas, notifica de la falta de pago a Legal para que emita la Carta Documento.
 \end{enumerate}
 
@@ -125,8 +125,8 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
   \includegraphics{./Images/Simbolos/simbolo-Registro.png}
 \end{center}
 \begin{enumerate}
-\item Finanzas: registra en el sistema el cobro en la cuenta \textit{cobros}.
-\item Finanzas: registra en el sistema el la falta de pago en la cuenta \textit{pérdidas}.
+\item Finanzas: registra en el subsistema de contaduría el cobro en la cuenta \textit{cobros}. Además registra en la cuenta corriente del cliente el pago de la factura. Luego registra en el sistema (AR) el cheque con el que el cliente realizó el pago.
+\item Finanzas: registra en el subsistema de contaduría la falta de pago en la cuenta \textit{pérdidas}. Además deja constancia en la cuenta corriente del cliente que no realizo el pago.
 \end{enumerate}
 
 \begin{center}
@@ -139,12 +139,24 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 \item Cliente: archiva el original del recibo.
 \item Ventas: almacena copia del segundo y/o tercer Reclamo a Cliente.
 \item Legal: almacena copia de Carta Documento.
+\item Finanzas: al no haber facturas a cobrar cierra el reporte del sistema (AR).
 \end{enumerate}
+
+
+\begin{center}
+  \textbf{Eliminación de Documento}
+  \includegraphics{./Images/Simbolos/simbolo-destruccion.png}
+\end{center}
+\begin{enumerate}
+\item Cliente: El cliente ignora el reclamo de parte de la empresa, desechando el mismo.
+\end{enumerate}
+
 
 \pagebreak
 \section{Formularios de Cobranzas}
 
 \subsection{Listado de Cobranzas}
+En esta sección se describe el formulario Listado de Cobranzas. Este formulario es de cobros pero no esta dentro del alcance del circuito de cobranzas relevado en la sección anterior.
 \begin{center}
   \includegraphics[scale=0.6]{./Images/FormulariosIEP/listado_cobranzas_IEP.png}
 \end{center}
@@ -178,10 +190,10 @@ Por simplicidad, en este caso se describe el caso en el cual el cliente se acerc
 
 \begin{itemize}
   \item \textbf{Objetivo:} Servir de comprobante para dejar constancia de la cobranza realizada.
-  \item \textbf{Alcance:} Este documento lo confecciona el cobrador al recibir un pago del cliente.
-  \item \textbf{Emisor:} Cobrador
-  \item \textbf{Cantidad de Copias Emitidas:} 3
-  \item \textbf{Sector receptor:} el cliente (original); tesorería el duplicado, cobranzas el triplicado, y el cuadruplicado queda retenido por el cobrador (luego pasa a cobranzas).
+  \item \textbf{Alcance:} Este documento lo confecciona Finanzas al recibir el pago del cliente.
+  \item \textbf{Emisor:} Finanzas
+  \item \textbf{Cantidad de Copias Emitidas:} 1
+  \item \textbf{Sector receptor:} el cliente recibe el original, mientras que el sector de finanzas se queda con el duplicado.
  \end{itemize}
  
 \subsubsection{Descripci\'on campos Recibo}
